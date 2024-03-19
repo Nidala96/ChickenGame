@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://fbb43kaq60ns"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hifuj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfpfw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_aphtw"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_hifuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bfpfw")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(19.92, 19.92)
+mesh = SubResource("BoxMesh_aphtw")
