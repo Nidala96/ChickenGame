@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwgpj8bvbib7d"]
+[gd_scene load_steps=13 format=3 uid="uid://cwgpj8bvbib7d"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_kphqs"]
 [ext_resource type="Texture2D" uid="uid://ca1trubkxdagw" path="res://Assets/Player.png" id="1_wbqci"]
+[ext_resource type="PackedScene" uid="uid://cl46s1dq08g01" path="res://Scenes/shotgun.tscn" id="3_ued8l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1vny"]
 atlas = ExtResource("1_wbqci")
@@ -87,3 +88,6 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -7)
 shape = SubResource("CapsuleShape2D_rlta7")
+
+[node name="Shotgun" parent="." instance=ExtResource("3_ued8l")]
+position = Vector2(0, -7)

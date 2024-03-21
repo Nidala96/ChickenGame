@@ -1,7 +1,6 @@
 extends Marker2D
 
-<<<<<<< Updated upstream
-=======
+
 var crosshair_texture = preload("res://Assets/crosshair.png")
 @onready var bullet_scene = preload("res://Scenes/bullet.tscn")
 var node2d
@@ -27,4 +26,3 @@ func shoot():
 	bullet.global_position = node2d.global_position
 	bullet.rotation = move_direction.angle()
 	
->>>>>>> Stashed changes
