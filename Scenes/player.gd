@@ -24,6 +24,7 @@ func horizontal_movement():
 	horizontalInput = Input.get_action_strength("right") -  Input.get_action_strength("left")
 	# horizontal velocity which moves player left or right based on input
 	velocity.x = horizontalInput * runSpeed
+	
 
 func animation_status():
 	if horizontalInput == 0:
@@ -44,3 +45,5 @@ func jump():
 func gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravityForce * delta
+		
+
