@@ -1,17 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwalol2ivbjnb"]
+[gd_scene load_steps=4 format=3 uid="uid://dwalol2ivbjnb"]
 
-[ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="1_kgx7e"]
-[ext_resource type="PackedScene" uid="uid://fbb43kaq60ns" path="res://Scenes/static_body_2d_test.tscn" id="2_esw8m"]
+[ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="1_303jv"]
+[ext_resource type="PackedScene" uid="uid://fbb43kaq60ns" path="res://Scenes/static_body_2d_test.tscn" id="2_uqw5l"]
+[ext_resource type="PackedScene" uid="uid://blpbhlpfjtgx8" path="res://Scenes/base_chicken.tscn" id="3_48wnu"]
 
 [node name="game_test" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_kgx7e")]
+[node name="Player" parent="." instance=ExtResource("1_303jv")]
 position = Vector2(-1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 0)
 zoom = Vector2(8.18, 8.18)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_esw8m")]
+[node name="StaticBody2D" parent="." instance=ExtResource("2_uqw5l")]
 position = Vector2(0, 10)
 scale = Vector2(22.56, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_uqw5l")]
+position = Vector2(68, -6)
+scale = Vector2(0.26, 0.79)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_uqw5l")]
+position = Vector2(30, -6)
+scale = Vector2(0.26, 0.79)
+
+[node name="BaseChicken" parent="." instance=ExtResource("3_48wnu")]
+position = Vector2(49, -8)
