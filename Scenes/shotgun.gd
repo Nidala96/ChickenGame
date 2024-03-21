@@ -1,12 +1,13 @@
 extends Marker2D
 
+
 var crosshair_texture = preload("res://Assets/crosshair.png")
 @onready var bullet_scene = preload("res://Scenes/bullet.tscn")
 var node2d
 
 func _ready():
 	Input.set_custom_mouse_cursor(crosshair_texture)
-	node2d = get_node("Node2D")
+	node2d = %BulletSpawnPoint
 	
 func _physics_process(delta):
 		var mouse_position = get_global_mouse_position()
