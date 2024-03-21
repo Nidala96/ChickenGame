@@ -6,7 +6,7 @@ var crosshair_texture = preload("res://Assets/crosshair.png")
 var node2d
 
 func _ready():
-	Input.set_custom_mouse_cursor(crosshair_texture)
+	#Input.set_custom_mouse_cursor(crosshair_texture)
 	node2d = %BulletSpawnPoint
 	
 func _physics_process(delta):
