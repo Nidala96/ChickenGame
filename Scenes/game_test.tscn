@@ -7,18 +7,20 @@
 [node name="game_test" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_303jv")]
-position = Vector2(-1, 0)
+position = Vector2(29, -14)
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1, 0)
+position = Vector2(1, -12)
 zoom = Vector2(8.18, 8.18)
+drag_vertical_enabled = true
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_uqw5l")]
 position = Vector2(0, 10)
 scale = Vector2(22.56, 1)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_uqw5l")]
-position = Vector2(68, -6)
+position = Vector2(112, -5)
 scale = Vector2(0.26, 0.79)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_uqw5l")]
