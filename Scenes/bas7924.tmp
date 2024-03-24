@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://blpbhlpfjtgx8"]
+
+[ext_resource type="Script" path="res://Scenes/base_chicken.gd" id="1_5vxw2"]
+[ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_hmys8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6uir"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vxyu"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7wkk"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktlm1"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu0a4"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa5cy"]
+atlas = ExtResource("1_hmys8")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4pis"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_b6uir")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_3vxyu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7wkk")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_ktlm1")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_yu0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa5cy")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vm6i"]
+size = Vector2(12, 11)
+
+[node name="BaseChicken" type="CharacterBody2D"]
+script = ExtResource("1_5vxw2")
+moveSpeed = 15.0
+
+[node name="BaseChickenSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_b4pis")
+animation = &"idle"
+frame = 1
+frame_progress = 0.435044
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_7vm6i")
