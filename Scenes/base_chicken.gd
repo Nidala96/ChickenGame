@@ -21,7 +21,6 @@ func _physics_process(delta):
 func movement():
 	if is_on_ceiling():
 		velocity.x = 0
-		print("ceiling")
 	else:
 		velocity.x = moveSpeed * direction.x
 

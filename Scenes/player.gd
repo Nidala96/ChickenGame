@@ -6,6 +6,12 @@ extends CharacterBody2D
 @export var gravityForce = 200
 @onready var horizontalInput
 
+@export var playerHealth : float = 100
+@export var enemyDamage : float = 25
+
+#signal emitted when enemies hit the player
+signal hit
+
 
 #movement and physics
 func _physics_process(delta):
@@ -14,10 +20,10 @@ func _physics_process(delta):
 	jump()
 	# horizontal movement processing (left, right)
 	horizontal_movement()
-	#applies current animation
+	#applies animations
 	animation_status()
 	#applies movement
-	move_and_slide() 
+	move_and_slide()
 
 func horizontal_movement():
 	# if keys are pressed it will return 1 for right, -1 for left, and 0 for neither
@@ -47,3 +53,9 @@ func gravity(delta):
 		velocity.y += gravityForce * delta
 		
 
+
+	
+
+
+func _on_hurt_box_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	pass # Replace with function body.

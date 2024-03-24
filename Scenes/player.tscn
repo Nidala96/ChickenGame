@@ -1,8 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwgpj8bvbib7d"]
+[gd_scene load_steps=16 format=3 uid="uid://cwgpj8bvbib7d"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_kphqs"]
+[ext_resource type="Texture2D" uid="uid://rf5asonau66v" path="res://Assets/hurt_animation.png" id="2_7hpph"]
 [ext_resource type="Texture2D" uid="uid://ca1trubkxdagw" path="res://Assets/player_sprite_sheet.png" id="2_hrk2d"]
 [ext_resource type="PackedScene" uid="uid://cl46s1dq08g01" path="res://Scenes/shotgun.tscn" id="3_ued8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kqi1"]
+atlas = ExtResource("2_7hpph")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1vny"]
 atlas = ExtResource("2_hrk2d")
@@ -34,6 +39,14 @@ region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s1d2i"]
 animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8kqi1")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.5,
 "texture": SubResource("AtlasTexture_e1vny")
@@ -74,6 +87,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu45j"]
 size = Vector2(8, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owgug"]
+size = Vector2(10, 9)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kphqs")
 
@@ -91,3 +107,12 @@ shape = SubResource("RectangleShape2D_iu45j")
 
 [node name="Shotgun" parent="." instance=ExtResource("3_ued8l")]
 position = Vector2(0, -7)
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="HurtBoxCollison" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, -6.5)
+shape = SubResource("RectangleShape2D_owgug")
+debug_color = Color(0.964706, 0, 0.482353, 0.419608)
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
