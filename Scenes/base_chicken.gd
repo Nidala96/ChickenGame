@@ -11,13 +11,15 @@ var direction = right
 
 func _physics_process(delta):
 	animation_states()
-	movement()
-	move_and_slide()
 	turn()
+	movement()
 	sprite_flip()
+	move_and_slide()
+	
+	
 
 func movement():
-	if is_on_ceiling() && not is_on_wall():
+	if is_on_ceiling():
 		velocity.x = 0
 	else:
 		velocity.x = moveSpeed * direction.x
@@ -33,11 +35,13 @@ func turn():
 func animation_states():
 	if velocity.x > 0:
 		%BaseChickenSprite.play("run")
+	elif velocity.x == 0:
+		%BaseChickenSprite.play("idle")
 
 func sprite_flip():
 	if direction == right:
 		%BaseChickenSprite.flip_h = false
 	elif direction == left:
 		%BaseChickenSprite.flip_h = true
-	elif velocity.x == 0:
-		%BaseChickenSprite.play("idle")
+	
+		
