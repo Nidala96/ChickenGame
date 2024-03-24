@@ -12,15 +12,14 @@
 			"title": "Todo",
 			"tasks": [
 				"6900e967-291a-4f00-b161-ee45d546d9f9",
-				"9a99f772-07dd-4a13-9c63-6e33d72b5d0c",
-				"ca80ddfd-eb97-4108-b045-650a96b3485a",
-				"1a0b845d-5ee9-45d0-9cc1-dff446ddd52d"
+				"9a99f772-07dd-4a13-9c63-6e33d72b5d0c"
 			]
 		},
 		{
 			"uuid": "21611780-5389-4267-94b7-444852627c27",
 			"title": "Doing",
 			"tasks": [
+				"1a0b845d-5ee9-45d0-9cc1-dff446ddd52d",
 				"91431b9f-345e-435c-b33d-e512df58cfe9"
 			]
 		},
@@ -80,30 +79,80 @@
 			"steps": []
 		},
 		{
+			"uuid": "1a0b845d-5ee9-45d0-9cc1-dff446ddd52d",
+			"title": "Player Mechanichs Polish",
+			"description": "",
+			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
+			"steps": [
+				{
+					"details": "shooting bullet polish",
+					"done": false
+				},
+				{
+					"details": "jumping force modulation",
+					"done": false
+				},
+				{
+					"details": "walk and run logic",
+					"done": false
+				},
+				{
+					"details": "coyote time",
+					"done": false
+				},
+				{
+					"details": "taking damage logic",
+					"done": false
+				},
+				{
+					"details": "death logic",
+					"done": false
+				},
+				{
+					"details": "death animation",
+					"done": false
+				},
+				{
+					"details": "shooting animation",
+					"done": false
+				}
+			]
+		},
+		{
 			"uuid": "91431b9f-345e-435c-b33d-e512df58cfe9",
-			"title": "Enemies",
+			"title": "Base Chicken",
 			"description": "",
 			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
 			"steps": [
 				{
 					"details": "Chicken Animation",
 					"done": false
+				},
+				{
+					"details": "Basic Movement",
+					"done": true
+				},
+				{
+					"details": "Damaging Player",
+					"done": false
+				},
+				{
+					"details": "Taking Damage Logic",
+					"done": false
+				},
+				{
+					"details": "Run Animation",
+					"done": true
+				},
+				{
+					"details": "Death Animation",
+					"done": false
+				},
+				{
+					"details": "Death Logic",
+					"done": false
 				}
 			]
-		},
-		{
-			"uuid": "ca80ddfd-eb97-4108-b045-650a96b3485a",
-			"title": "Folder Organization",
-			"description": "",
-			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
-			"steps": []
-		},
-		{
-			"uuid": "1a0b845d-5ee9-45d0-9cc1-dff446ddd52d",
-			"title": "Player Mechanichs Polish",
-			"description": "",
-			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
-			"steps": []
 		}
 	],
 	"layout": {
