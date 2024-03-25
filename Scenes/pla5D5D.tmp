@@ -98,7 +98,7 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(1, -8)
 sprite_frames = SubResource("SpriteFrames_s1d2i")
-animation = &"hurt"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
@@ -115,4 +115,4 @@ position = Vector2(1, -6.5)
 shape = SubResource("RectangleShape2D_owgug")
 debug_color = Color(0.964706, 0, 0.482353, 0.419608)
 
-[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="body_shape_entered" from="HurtBox" to="." method="_on_hurt_box_body_shape_entered"]

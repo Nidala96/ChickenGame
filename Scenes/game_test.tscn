@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwalol2ivbjnb"]
+[gd_scene load_steps=5 format=3 uid="uid://dwalol2ivbjnb"]
 
 [ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="1_303jv"]
 [ext_resource type="PackedScene" uid="uid://fbb43kaq60ns" path="res://Scenes/static_body_2d_test.tscn" id="2_uqw5l"]
 [ext_resource type="PackedScene" uid="uid://blpbhlpfjtgx8" path="res://Scenes/base_chicken.tscn" id="3_48wnu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h5s7"]
+size = Vector2(13, 11)
 
 [node name="game_test" type="Node2D"]
 
@@ -32,3 +35,9 @@ scale = Vector2(0.26, 0.79)
 position = Vector2(49, -8)
 collision_layer = 2
 collision_mask = 3
+
+[node name="ChickenArea" type="Area2D" parent="BaseChicken"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseChicken/ChickenArea"]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_5h5s7")

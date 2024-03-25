@@ -31,7 +31,7 @@ func shoot():
 func rotateGun(mouse_position):
 	var pos = global_position
 	var rot = rad_to_deg((mouse_position - pos).angle())
-	print(rot)
+	#print(rot)
 	if(rot >= -90 and rot <= 90):
 		shotgunSprite.flip_v = false
 	else:

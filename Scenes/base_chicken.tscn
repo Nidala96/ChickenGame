@@ -69,9 +69,7 @@ moveSpeed = 15.0
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_b4pis")
-animation = &"idle"
-frame = 1
-frame_progress = 0.435044
+animation = &"run"
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
