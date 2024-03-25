@@ -35,8 +35,8 @@ func turn():
 func animation_states():
 	if velocity.x > 0:
 		%BaseChickenSprite.play("run")
-	elif velocity.x == 0:
-		%BaseChickenSprite.play("idle")
+	#elif velocity.x == 0:
+		#%BaseChickenSprite.play("idle")
 
 func sprite_flip():
 	if direction == right:

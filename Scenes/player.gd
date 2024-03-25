@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 @export var playerHealth : float = 100
 @export var enemyDamage : float = 25
-
+var gotHit = false
 
 #signal emitted when enemies hit the player
 signal hit
@@ -34,12 +34,16 @@ func horizontal_movement():
 	
 
 func animation_status():
-	if horizontalInput == 0:
+	if gotHit == true:
+		%PlayerAnimSprite.play("hurt")
+		await get_tree().create_timer(1).timeout
+		gotHit = false
+	elif horizontalInput == 0 && gotHit == false:
 		%PlayerAnimSprite.play("idle")
-	elif horizontalInput == 1:
+	elif horizontalInput == 1 && gotHit == false:
 		%PlayerAnimSprite.flip_h = false
 		%PlayerAnimSprite.play("run")
-	elif horizontalInput == -1:
+	elif horizontalInput == -1 && gotHit == false:
 		%PlayerAnimSprite.flip_h = true
 		%PlayerAnimSprite.play("run")
 	if velocity.y < 0 or not is_on_floor():
@@ -58,4 +62,6 @@ func _on_hurt_box_area_entered(area):
 	print(area.name)
 	if area.name == "ChickenArea":
 		playerHealth -= 20
-	print(playerHealth)
+		gotHit = true
+		print(playerHealth)
+		
