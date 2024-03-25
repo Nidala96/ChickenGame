@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://blpbhlpfjtgx8"]
+[gd_scene load_steps=12 format=3 uid="uid://blpbhlpfjtgx8"]
 
 [ext_resource type="Script" path="res://Scenes/base_chicken.gd" id="1_5vxw2"]
 [ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_hmys8"]
@@ -61,6 +61,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vm6i"]
 size = Vector2(12, 11)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eqix"]
+size = Vector2(14, 11)
+
 [node name="BaseChicken" type="CharacterBody2D"]
 script = ExtResource("1_5vxw2")
 moveSpeed = 15.0
@@ -75,3 +78,11 @@ animation = &"run"
 unique_name_in_owner = true
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_7vm6i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_4eqix")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

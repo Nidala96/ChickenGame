@@ -1,4 +1,4 @@
-extends Area2D
+extends Sprite2D
 
 class_name Bullet
 var speed = 200

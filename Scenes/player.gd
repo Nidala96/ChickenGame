@@ -7,12 +7,7 @@ extends CharacterBody2D
 @onready var horizontalInput
 
 @export var playerHealth : float = 100
-@export var enemyDamage : float = 25
 var gotHit = false
-
-#signal emitted when enemies hit the player
-signal hit
-
 
 #movement and physics
 func _physics_process(delta):
@@ -57,11 +52,6 @@ func gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravityForce * delta
 		
-
-func _on_hurt_box_area_entered(area):
-	print(area.name)
-	if area.name == "ChickenArea":
-		playerHealth -= 20
-		gotHit = true
-		print(playerHealth)
-		
+func player_take_damage(damage):
+	playerHealth -= damage
+	gotHit = true

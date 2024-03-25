@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var healthPoints : int = 3
 @export var moveSpeed : float = 30
-@onready var playerBody = $"../Player"
+@export var damage : float = 25
 
 var motion : Vector2 = Vector2()
 var left : Vector2 = Vector2(-1,0)
@@ -15,13 +15,8 @@ func _physics_process(delta):
 	movement()
 	sprite_flip()
 	move_and_slide()
-	
-	
 
 func movement():
-	if is_on_ceiling():
-		velocity.x = 0
-	else:
 		velocity.x = moveSpeed * direction.x
 
 func turn():
@@ -44,4 +39,7 @@ func sprite_flip():
 	elif direction == left:
 		%BaseChickenSprite.flip_h = true
 	
-		
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("player_take_damage"):
+		body.player_take_damage(damage)
