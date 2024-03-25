@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var playerHealth : float = 100
 @export var enemyDamage : float = 25
 
+
 #signal emitted when enemies hit the player
 signal hit
 
@@ -53,9 +54,8 @@ func gravity(delta):
 		velocity.y += gravityForce * delta
 		
 
-
-	
-
-
-func _on_hurt_box_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	pass # Replace with function body.
+func _on_hurt_box_area_entered(area):
+	print(area.name)
+	if area.name == "ChickenArea":
+		playerHealth -= 20
+	print(playerHealth)

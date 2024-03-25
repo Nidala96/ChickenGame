@@ -115,4 +115,4 @@ position = Vector2(1, -6.5)
 shape = SubResource("RectangleShape2D_owgug")
 debug_color = Color(0.964706, 0, 0.482353, 0.419608)
 
-[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="body_shape_entered" from="HurtBox" to="." method="_on_hurt_box_body_shape_entered"]
