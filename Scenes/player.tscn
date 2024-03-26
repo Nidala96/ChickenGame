@@ -88,6 +88,7 @@ animations = [{
 size = Vector2(8, 14)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 20
 script = ExtResource("1_kphqs")
 
 [node name="PlayerAnimSprite" type="AnimatedSprite2D" parent="."]

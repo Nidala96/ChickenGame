@@ -126,7 +126,7 @@
 			"steps": [
 				{
 					"details": "Chicken Animation",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Basic Movement",
@@ -134,7 +134,7 @@
 				},
 				{
 					"details": "Damaging Player",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Taking Damage Logic",

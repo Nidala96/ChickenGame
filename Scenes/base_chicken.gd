@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var healthPoints : int = 3
+@export var healthPoints : float = 100
 @export var moveSpeed : float = 30
 @export var damage : float = 25
 
@@ -38,11 +38,13 @@ func sprite_flip():
 		%BaseChickenSprite.flip_h = false
 	elif direction == left:
 		%BaseChickenSprite.flip_h = true
-	
 
-
-
-
+#emmits if the player touches a chicken 
 func _on_hurt_box_body_entered(body):
 	if body.has_method("player_take_damage"):
 		body.player_take_damage(damage)
+
+func chicken_take_damage(bulletDamage):
+	healthPoints -= bulletDamage
+	print(healthPoints)
+	
