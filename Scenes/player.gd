@@ -31,7 +31,7 @@ func horizontal_movement():
 func animation_status():
 	if gotHit == true:
 		%PlayerAnimSprite.play("hurt")
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.2).timeout
 		gotHit = false
 	elif horizontalInput == 0 && gotHit == false:
 		%PlayerAnimSprite.play("idle")

@@ -40,6 +40,9 @@ func sprite_flip():
 		%BaseChickenSprite.flip_h = true
 	
 
-func _on_area_2d_body_entered(body):
+
+
+
+func _on_hurt_box_body_entered(body):
 	if body.has_method("player_take_damage"):
 		body.player_take_damage(damage)
