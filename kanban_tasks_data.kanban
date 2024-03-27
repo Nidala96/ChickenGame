@@ -20,7 +20,8 @@
 			"title": "Doing",
 			"tasks": [
 				"1a0b845d-5ee9-45d0-9cc1-dff446ddd52d",
-				"91431b9f-345e-435c-b33d-e512df58cfe9"
+				"91431b9f-345e-435c-b33d-e512df58cfe9",
+				"f025d4b1-5da8-4d3d-a18f-f0e2c3c9ec3d"
 			]
 		},
 		{
@@ -126,7 +127,7 @@
 			"steps": [
 				{
 					"details": "Chicken Animation",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Basic Movement",
@@ -134,11 +135,11 @@
 				},
 				{
 					"details": "Damaging Player",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Taking Damage Logic",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Run Animation",
@@ -150,6 +151,22 @@
 				},
 				{
 					"details": "Death Logic",
+					"done": false
+				},
+				{
+					"details": "Don't get stuck on wall while player is on top",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "f025d4b1-5da8-4d3d-a18f-f0e2c3c9ec3d",
+			"title": "Camera",
+			"description": "",
+			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
+			"steps": [
+				{
+					"details": "Move when cursor touches the borders of the screen",
 					"done": false
 				}
 			]

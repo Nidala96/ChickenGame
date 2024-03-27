@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://blpbhlpfjtgx8"]
+[gd_scene load_steps=12 format=3 uid="uid://blpbhlpfjtgx8"]
 
 [ext_resource type="Script" path="res://Scenes/base_chicken.gd" id="1_5vxw2"]
 [ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_hmys8"]
@@ -59,7 +59,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vm6i"]
-size = Vector2(12, 11)
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eqix"]
+size = Vector2(13, 11)
 
 [node name="BaseChicken" type="CharacterBody2D"]
 script = ExtResource("1_5vxw2")
@@ -73,5 +76,13 @@ animation = &"run"
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, 2.5)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_7vm6i")
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_4eqix")
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
