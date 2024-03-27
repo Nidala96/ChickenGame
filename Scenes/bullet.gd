@@ -15,3 +15,4 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.has_method("chicken_take_damage"):
 		body.chicken_take_damage(bulletDamage)
+		queue_free()
