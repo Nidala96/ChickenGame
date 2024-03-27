@@ -684,7 +684,7 @@ offset_right = 19219.0
 offset_bottom = 19244.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.227451, 0.266667, 1)
+color = Color(0, 0.105882, 0.12549, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -701,3 +701,4 @@ zoom = Vector2(6.47, 6.47)
 
 [node name="BaseChicken" parent="." instance=ExtResource("4_c6fwi")]
 position = Vector2(383, -24)
+floor_block_on_wall = false
