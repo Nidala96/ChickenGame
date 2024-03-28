@@ -4,10 +4,6 @@ extends CharacterBody2D
 @export var moveSpeed : float = 30
 @export var damage : float = 25
 
-@onready var hitBox = %HitBox
-@onready var deathBox = %DeathBox
-
-
 var motion : Vector2 = Vector2()
 var left : Vector2 = Vector2(-1,0)
 var right : Vector2 = Vector2(1,0)

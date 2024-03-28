@@ -102,11 +102,11 @@
 				},
 				{
 					"details": "coyote time",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "taking damage logic",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "death logic",
