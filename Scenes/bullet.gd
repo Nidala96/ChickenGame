@@ -5,7 +5,7 @@ var move_direction: Vector2 = Vector2.ZERO
 
 @export var speed = 200
 @export var bulletDamage : float = 25
-@export var bulletDuration = 0.3
+@export var bulletDuration = 0.15
 
 func _process(delta):
 	global_position += move_direction * delta * speed
