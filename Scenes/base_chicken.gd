@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var damage : float = 25
 
 @onready var hitBox = %HitBox
-@onready var deathBox = %DeathBox
+#@onready var deathBox = %DeathBox
 
 
 var motion : Vector2 = Vector2()

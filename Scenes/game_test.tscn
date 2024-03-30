@@ -8,7 +8,7 @@
 [node name="game_test" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_303jv")]
-position = Vector2(-17, 0)
+position = Vector2(85, 0)
 collision_layer = 3
 collision_mask = 3
 
@@ -16,6 +16,8 @@ collision_mask = 3
 
 [node name="BaseChicken" parent="." instance=ExtResource("3_48wnu")]
 position = Vector2(51, -8)
+healthPoints = 100.0
+moveSpeed = 20.0
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_uqw5l")]
 position = Vector2(0, 10)

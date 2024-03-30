@@ -2,14 +2,16 @@ extends CharacterBody2D
 
 #player movement variables
 @export var runSpeed = 100
+@export var walkSpeed = 50
 @export var jumpSpeed = -100
 @export var gravityForce = 200
 @onready var horizontalInput
 @export var coyoteTime : float = 10
-
 @export var playerHealth : float = 100
 var gotHit = false
 var JumpAvailable = false
+var isDead = false
+var isWalking = false
 	
 	
 #movement and physics
@@ -23,6 +25,9 @@ func _physics_process(delta):
 	animation_status()
 	#applies movement
 	move_and_slide()
+	death()
+	gameOver()
+	walk()
 	#control if player is on floor every frame
 	#last_floor = is_on_floor()
 
@@ -30,8 +35,19 @@ func horizontal_movement():
 	# if keys are pressed it will return 1 for right, -1 for left, and 0 for neither
 	horizontalInput = Input.get_action_strength("right") -  Input.get_action_strength("left")
 	# horizontal velocity which moves player left or right based on input
-	velocity.x = horizontalInput * runSpeed
-	
+	if isWalking:
+		velocity.x = horizontalInput * walkSpeed
+		print("walk")
+	else:
+		velocity.x = horizontalInput * runSpeed
+		
+func walk():
+	if Input.is_action_just_pressed("walk") and is_on_floor():
+		isWalking = true
+	elif Input.is_action_just_released("walk"):
+		isWalking = false
+		
+		
 
 func animation_status():
 	if gotHit == true:
@@ -54,9 +70,6 @@ func jump():
 		velocity.y = jumpSpeed
 		JumpAvailable = false
 	
-	
-		
-
 func gravity(delta):
 	if not is_on_floor():
 		if JumpAvailable:
@@ -71,3 +84,14 @@ func player_take_damage(damage):
 	
 func Coyote_Timeout():
 	JumpAvailable = false
+	
+func death():
+	if playerHealth <= 0:
+		isDead = true
+
+
+func gameOver():
+	if isDead:
+		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		
+	
