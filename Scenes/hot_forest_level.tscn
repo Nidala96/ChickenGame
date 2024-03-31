@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://kjflj55idlf"]
+
+[ext_resource type="PackedScene" path="res://background.tscn" id="1_ictn5"]
+
+[node name="HotForestLevel" type="Node2D"]
+
+[node name="ColorRect" parent="." instance=ExtResource("1_ictn5")]
+offset_left = -1412.0
+offset_top = -893.0
+offset_right = 19274.0
+offset_bottom = 19273.0
