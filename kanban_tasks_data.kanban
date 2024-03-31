@@ -98,7 +98,7 @@
 				},
 				{
 					"details": "walk and run logic",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "coyote time",
@@ -110,7 +110,7 @@
 				},
 				{
 					"details": "death logic",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "death animation",

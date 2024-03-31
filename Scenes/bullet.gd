@@ -12,7 +12,8 @@ func _process(delta):
 	await get_tree().create_timer(bulletDuration).timeout
 	queue_free()
 
-func _on_area_2d_body_entered(body):
+
+func on_bullet_hit(body):
 	if body.has_method("chicken_take_damage"):
 		body.chicken_take_damage(bulletDamage)
 		queue_free()

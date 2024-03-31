@@ -92,6 +92,7 @@ size = Vector2(13, 11)
 
 [node name="BaseChicken" type="CharacterBody2D"]
 script = ExtResource("1_5vxw2")
+healthPoints = 10000.0
 moveSpeed = 15.0
 
 [node name="BaseChickenSprite" type="AnimatedSprite2D" parent="."]
