@@ -6,7 +6,6 @@ extends CharacterBody2D
 
 
 @onready var hitBox = %HitBox
-@onready var deathBox = %DeathBox
 
 var motion : Vector2 = Vector2()
 var left : Vector2 = Vector2(-1,0)

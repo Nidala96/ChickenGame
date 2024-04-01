@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cwgpj8bvbib7d"]
+[gd_scene load_steps=16 format=3 uid="uid://cwgpj8bvbib7d"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_kphqs"]
 [ext_resource type="Texture2D" uid="uid://rf5asonau66v" path="res://Assets/hurt_animation.png" id="2_7hpph"]
 [ext_resource type="Texture2D" uid="uid://ca1trubkxdagw" path="res://Assets/player_sprite_sheet.png" id="2_hrk2d"]
 [ext_resource type="PackedScene" uid="uid://cl46s1dq08g01" path="res://Scenes/shotgun.tscn" id="3_ued8l"]
+[ext_resource type="PackedScene" uid="uid://dpqb5xid2ql46" path="res://Scenes/camera_2d.tscn" id="5_ipkoo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8kqi1"]
 atlas = ExtResource("2_7hpph")
@@ -105,3 +106,6 @@ shape = SubResource("RectangleShape2D_iu45j")
 
 [node name="Shotgun" parent="." instance=ExtResource("3_ued8l")]
 position = Vector2(0, -7)
+
+[node name="Camera2D" parent="." instance=ExtResource("5_ipkoo")]
+position = Vector2(0, -10)
