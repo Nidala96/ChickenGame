@@ -89,7 +89,6 @@ func death():
 	if playerHealth <= 0:
 		isDead = true
 
-
 func gameOver():
 	if isDead:
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")

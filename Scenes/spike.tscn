@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhwtvnijpq61y"]
+
+[ext_resource type="Script" path="res://Spike.gd" id="1_yoj65"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c88fx"]
+
+[node name="Spike" type="StaticBody2D"]
+script = ExtResource("1_yoj65")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_c88fx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
