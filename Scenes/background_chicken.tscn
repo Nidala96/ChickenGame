@@ -33,4 +33,4 @@ script = ExtResource("1_kg0cf")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_y26g8")
 animation = &"idle"
-frame_progress = 0.405792
+frame_progress = 0.249488
