@@ -3,8 +3,8 @@ extends CharacterBody2D
 #player movement variables
 @export var runSpeed = 100
 @export var walkSpeed = 50
-@export var jumpSpeed = -100
-@export var gravityForce = 200
+@export var jumpSpeed = -140
+@export var gravityForce = 240
 @onready var horizontalInput
 @export var coyoteTime : float = 10
 @export var playerHealth : float = 100
