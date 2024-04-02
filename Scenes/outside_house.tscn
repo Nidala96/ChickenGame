@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsxyqt4tuuthi"]
+
+[ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_245sv"]
+[ext_resource type="Texture2D" uid="uid://dk2bq2mi8omjo" path="res://Assets/outside_house.png" id="2_0ha6q"]
+[ext_resource type="PackedScene" uid="uid://c4wpwp6ub07s8" path="res://Scenes/tile_map.tscn" id="3_grsv8"]
+[ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="4_3a1x2"]
+[ext_resource type="PackedScene" uid="uid://b7ira5l2aknek" path="res://Scenes/background_chicken.tscn" id="5_2l0lq"]
+[ext_resource type="Texture2D" uid="uid://cgc1p7n4m8rdw" path="res://Assets/apple.png" id="6_6vj83"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_245sv")]
+z_index = -400
+
+[node name="OutsideHouse" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, 0)
+texture = ExtResource("2_0ha6q")
+
+[node name="TileMap" parent="." instance=ExtResource("3_grsv8")]
+layer_0/tile_data = PackedInt32Array(131069, 65537, 0, 131070, 131073, 0, 131071, 196609, 0, 65536, 131073, 0, 65537, 65537, 0, 65538, 65537, 0, 131067, 327681, 1, 131068, 196609, 0, 65539, 65537, 0, 65540, 65537, 0, 65541, 131073, 0, -65541, 262145, 1, -5, 262145, 2, 65531, 262145, 3, -262149, 262145, 1, -196613, 262145, 2, -131077, 262145, 3, 65542, 65537, 0, 65543, 196609, 0, 65544, 65537, 0, 65545, 196609, 0, 65546, 196609, 0, 65547, 196609, 0, 65548, 131073, 0, 65549, 131073, 0, 65550, 131073, 0, 65551, 131073, 0, 65552, 65537, 0, 65553, 131073, 0, 65554, 196609, 0, 65555, 65537, 0, 65556, 131073, 0, 65557, 131073, 0, 65558, 65537, 0, 65559, 65537, 0, 65560, 131073, 0, 65561, 131073, 0, 11, 524290, 2, -65525, 327682, 3, 12, 524290, 1610612738, 13, 524290, 1610612738, 14, 524290, 1610612738, 15, 524290, 1610612738, 16, 524290, 1610612738, 17, 524290, 1610612738, 18, 524290, 1610612738, 19, 524290, 1610612738, 20, 524290, 1610612738, 21, 524290, 1610612738, 22, 524290, 1610612738, 23, 524290, 1610612738, 24, 524290, 1610612738, 25, 524290, 1610612738, 65562, 65537, 0, 65563, 196609, 0, 65564, 65537, 0, 65565, 196609, 0, 65566, 196609, 0, 65567, 131073, 0, 65568, 196609, 0, 65569, 196609, 0, 65570, 131073, 0, 65571, 65537, 0, 65572, 196609, 0, 65573, 65537, 0, 65574, 65537, 0, 65575, 196609, 0, 65576, 131073, 0, 65577, 196609, 0, 65578, 196609, 0, 65579, 131073, 0, 65580, 131073, 0, 65581, 65537, 0, 65582, 65537, 0, 65583, 131073, 0, 65584, 131073, 0, 26, 524290, 2, -65510, 327682, 3, 49, 1, 0, -65486, 1, 0, -131021, 1, 0, -196556, 1, 0, 65585, 393217, 1, 50, 393217, 1, -65485, 393217, 1, -131020, 393217, 1, -196555, 65537, 0, -196554, 196609, 0, -196553, 131073, 0, -196552, 65537, 0, -196551, 65537, 0, -196550, 131073, 0, -196549, 196609, 0, -196548, 196609, 0, -196547, 131073, 0, -196546, 196609, 0, -196545, 65537, 0, -196544, 65537, 0, -196543, 131073, 0, -196542, 65537, 0, -196541, 196609, 0, -196540, 65537, 0, -196539, 65537, 0, -196538, 196609, 0, -196537, 131073, 0, -196536, 131073, 0, -196535, 65537, 0, -196534, 196609, 0, -196533, 196609, 0, -196532, 131073, 0, -196531, 65537, 0, -196530, 196609, 0, -196529, 131073, 0, -196528, 65537, 0, -327618, 393218, 4, -262082, 393218, 5, -458691, 786434, 4, -393155, 786434, 5, -458690, 851970, 4, -393154, 851970, 5, -458689, 917506, 4, -393153, 917506, 5, -589763, 983042, 4, -524227, 983042, 5, -589762, 1048578, 4, -524226, 1048578, 5, -589761, 1114114, 4, -524225, 1114114, 5)
+
+[node name="Player" parent="." instance=ExtResource("4_3a1x2")]
+position = Vector2(49, 16)
+
+[node name="BackgroundChicken" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(208, 8)
+
+[node name="BackgroundChicken2" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(239, 8)
+
+[node name="BackgroundChicken3" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(287, 8)
+scale = Vector2(-1, 1)
+
+[node name="BackgroundChicken4" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(332, 8)
+
+[node name="BackgroundChicken5" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(380, 8)
+scale = Vector2(-1, 1)
+
+[node name="BackgroundChicken6" parent="." instance=ExtResource("5_2l0lq")]
+position = Vector2(357, 8)
+
+[node name="Apple" type="Sprite2D" parent="."]
+position = Vector2(987, -48.495)
+texture = ExtResource("6_6vj83")
+
+[node name="Apple2" type="Sprite2D" parent="."]
+position = Vector2(979, -48.495)
+texture = ExtResource("6_6vj83")
+
+[node name="Apple3" type="Sprite2D" parent="."]
+position = Vector2(1011, -48.495)
+texture = ExtResource("6_6vj83")
+
+[node name="Apple4" type="Sprite2D" parent="."]
+position = Vector2(1021, -48.495)
+texture = ExtResource("6_6vj83")
+
+[node name="Apple5" type="Sprite2D" parent="."]
+position = Vector2(1031, -48.495)
+texture = ExtResource("6_6vj83")

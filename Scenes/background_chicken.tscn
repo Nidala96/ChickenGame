@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7ira5l2aknek"]
+
+[ext_resource type="Script" path="res://Scenes/background_chicken.gd" id="1_kg0cf"]
+[ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_ki3fr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65ur7"]
+atlas = ExtResource("1_ki3fr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8dx6"]
+atlas = ExtResource("1_ki3fr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y26g8"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_65ur7")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_g8dx6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BackgroundChicken" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_kg0cf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_y26g8")
+animation = &"idle"
+frame_progress = 0.405792
