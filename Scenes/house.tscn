@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://b16p7ny1l4xib"]
+
+[ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_h5m2k"]
+[ext_resource type="Texture2D" uid="uid://uivaue4ardo8" path="res://Assets/house.png" id="2_vfem0"]
+[ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="3_yh7sy"]
+[ext_resource type="PackedScene" uid="uid://l22cchloclfv" path="res://Scenes/floor.tscn" id="4_7gtmg"]
+[ext_resource type="Texture2D" uid="uid://dqdcc04kf6e45" path="res://Assets/mom.png" id="5_llwcp"]
+[ext_resource type="Texture2D" uid="uid://dncbwemed00t3" path="res://Assets/dad.png" id="6_c8nec"]
+
+[node name="House" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_h5m2k")]
+offset_left = -2316.0
+offset_top = -2192.0
+offset_right = 18370.0
+offset_bottom = 17974.0
+
+[node name="House" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(86, -237)
+texture = ExtResource("2_vfem0")
+
+[node name="Player" parent="." instance=ExtResource("3_yh7sy")]
+position = Vector2(29, -221)
+
+[node name="Floor" parent="." instance=ExtResource("4_7gtmg")]
+position = Vector2(86, -211)
+scale = Vector2(11.2, 1)
+
+[node name="Floor2" parent="." instance=ExtResource("4_7gtmg")]
+position = Vector2(-36, -313)
+rotation = 1.5708
+scale = Vector2(11.2, 1)
+
+[node name="Floor3" parent="." instance=ExtResource("4_7gtmg")]
+position = Vector2(208, -313)
+rotation = 1.5708
+scale = Vector2(11.2, 1)
+
+[node name="Mom" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(73, -229)
+texture = ExtResource("5_llwcp")
+
+[node name="Dad" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(146, -229)
+texture = ExtResource("6_c8nec")
