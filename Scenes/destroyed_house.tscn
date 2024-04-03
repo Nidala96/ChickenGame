@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=3 uid="uid://j3tbmkdl8og5"]
+
+[ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_o7s4e"]
+[ext_resource type="Texture2D" uid="uid://bmxun4hd8qqxt" path="res://Assets/destroyed_house.png" id="2_ymhst"]
+[ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="3_11mtc"]
+[ext_resource type="PackedScene" uid="uid://l22cchloclfv" path="res://Scenes/floor.tscn" id="4_aa3ld"]
+[ext_resource type="Texture2D" uid="uid://cn2srh5i612u5" path="res://Assets/dead_parent.png" id="5_fsyv2"]
+[ext_resource type="Texture2D" uid="uid://cw2krr87bmujh" path="res://Assets/gun_holder.png" id="6_6okuh"]
+[ext_resource type="Texture2D" uid="uid://ctvt2p55nub5s" path="res://Assets/vase.png" id="7_jjjds"]
+[ext_resource type="Texture2D" uid="uid://bjbk3qeyiwycf" path="res://Assets/flower.png" id="8_yavpj"]
+[ext_resource type="Texture2D" uid="uid://d1817ch7oacs1" path="res://Assets/shotgun.png" id="9_rgfpj"]
+[ext_resource type="Texture2D" uid="uid://cj1s06i4g7gra" path="res://Assets/painting_a.png" id="10_day58"]
+[ext_resource type="Texture2D" uid="uid://qiib8al0qtm4" path="res://Assets/painting_b.png" id="11_jln2d"]
+[ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="12_5e1wn"]
+
+[node name="House" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_o7s4e")]
+z_index = -200
+offset_left = -2316.0
+offset_top = -2192.0
+offset_right = 18370.0
+offset_bottom = 17974.0
+
+[node name="DestroyedHouse" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(86, -237)
+texture = ExtResource("2_ymhst")
+
+[node name="Player" parent="." instance=ExtResource("3_11mtc")]
+position = Vector2(164, -221)
+
+[node name="Floor" parent="." instance=ExtResource("4_aa3ld")]
+position = Vector2(86, -211)
+scale = Vector2(11.2, 1)
+
+[node name="Floor2" parent="." instance=ExtResource("4_aa3ld")]
+position = Vector2(-36, -313)
+rotation = 1.5708
+scale = Vector2(11.2, 1)
+
+[node name="Floor3" parent="." instance=ExtResource("4_aa3ld")]
+position = Vector2(208, -313)
+rotation = 1.5708
+scale = Vector2(11.2, 1)
+
+[node name="DeadParent" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(28, -226)
+rotation = -1.5708
+texture = ExtResource("5_fsyv2")
+
+[node name="DeadParent2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2, -226)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("5_fsyv2")
+
+[node name="GunHolder" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(146, -233)
+rotation = -1.24791
+texture = ExtResource("6_6okuh")
+
+[node name="Vase" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(105, -223)
+rotation = -1.65647
+texture = ExtResource("7_jjjds")
+
+[node name="Flower" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, -227)
+texture = ExtResource("8_yavpj")
+
+[node name="Shotgun" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -231)
+rotation = -1.15192
+scale = Vector2(1.29, 1.29)
+texture = ExtResource("9_rgfpj")
+
+[node name="PaintingA" type="Sprite2D" parent="."]
+z_index = -150
+texture_filter = 1
+position = Vector2(75, -231)
+texture = ExtResource("10_day58")
+
+[node name="PaintingB" type="Sprite2D" parent="."]
+z_index = -150
+texture_filter = 1
+position = Vector2(100, -232)
+rotation = 0.440273
+texture = ExtResource("11_jln2d")
+
+[node name="ChickenDead" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(132, -229)
+texture = ExtResource("12_5e1wn")
+
+[node name="ChickenDead2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-15, -229)
+texture = ExtResource("12_5e1wn")
+
+[node name="ChickenDead3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(114, -235)
+scale = Vector2(-1, 1)
+texture = ExtResource("12_5e1wn")
+
+[node name="ChickenDead5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, -229)
+scale = Vector2(-1, 1)
+texture = ExtResource("12_5e1wn")
+
+[node name="ChickenDead4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(49, -277)
+scale = Vector2(-1, 1)
+texture = ExtResource("12_5e1wn")
