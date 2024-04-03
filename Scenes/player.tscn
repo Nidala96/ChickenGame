@@ -91,6 +91,9 @@ size = Vector2(8, 14)
 [node name="Player" type="CharacterBody2D"]
 z_index = 20
 script = ExtResource("1_kphqs")
+jumpSpeed = -140
+coyoteTime = 0.3
+jumpImpede = -3
 
 [node name="PlayerAnimSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

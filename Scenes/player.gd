@@ -3,11 +3,13 @@ extends CharacterBody2D
 #player movement variables
 @export var runSpeed = 100
 @export var walkSpeed = 50
-@export var jumpSpeed = -140
+@export var jumpSpeed = -240
 @export var gravityForce = 240
 @onready var horizontalInput
 @export var coyoteTime : float = 10
 @export var playerHealth : float = 100
+@export var jumpImpede = -2
+var holdingJump = false
 var gotHit = false
 var JumpAvailable = false
 var isDead = false
@@ -69,6 +71,9 @@ func jump():
 	if Input.is_action_just_pressed("jump") and JumpAvailable:
 		velocity.y = jumpSpeed
 		JumpAvailable = false
+	if Input.is_action_just_released("jump") && velocity.y < 0:
+		velocity.y = 0;
+			
 	
 func gravity(delta):
 	if not is_on_floor():
