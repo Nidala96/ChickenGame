@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dlv0w2n2xe6v5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ba1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4suiq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_suqu3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8j1o1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oah4w"]
+
+[resource]
+Button/colors/font_color = Color(0.87451, 0.87451, 0.87451, 0)
+Button/colors/font_disabled_color = Color(0.87451, 0.87451, 0.87451, 0)
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/font_hover_pressed_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/font_outline_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/font_pressed_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_disabled_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_focus_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_hover_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_hover_pressed_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_normal_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/colors/icon_pressed_color = Color(0.94902, 0.94902, 0.94902, 0)
+Button/styles/disabled = SubResource("StyleBoxEmpty_2ba1b")
+Button/styles/focus = SubResource("StyleBoxEmpty_4suiq")
+Button/styles/hover = SubResource("StyleBoxEmpty_suqu3")
+Button/styles/normal = SubResource("StyleBoxEmpty_8j1o1")
+Button/styles/pressed = SubResource("StyleBoxEmpty_oah4w")

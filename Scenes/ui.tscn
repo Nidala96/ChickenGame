@@ -1,0 +1,140 @@
+[gd_scene load_steps=16 format=3 uid="uid://cuo5q2m067u64"]
+
+[ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="1_kcnm7"]
+[ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_m30y5"]
+[ext_resource type="Texture2D" uid="uid://c8gssjpqsjlcj" path="res://Assets/play_text.png" id="1_yf6yh"]
+[ext_resource type="Script" path="res://Scenes/ChickenPlayButton.gd" id="3_gknal"]
+[ext_resource type="Theme" uid="uid://dlv0w2n2xe6v5" path="res://Scenes/button_theme.tres" id="4_0vqnh"]
+[ext_resource type="Script" path="res://Scenes/ChickenQuit.gd" id="5_1rrbw"]
+[ext_resource type="Texture2D" uid="uid://baq6x17kufp3n" path="res://Assets/quit_text.png" id="7_jcjb3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5cfg"]
+atlas = ExtResource("1_kcnm7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs3cp"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0lsq"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulnes"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12kft"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81313"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehuv4"]
+atlas = ExtResource("1_m30y5")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44ucq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5cfg")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gs3cp")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_f0lsq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_ulnes")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_12kft")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_81313")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_ehuv4")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="MainMenu" type="Node2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="MainMenu"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0.105882, 0.12549, 1)
+
+[node name="ChickenPlayButton" type="AnimatedSprite2D" parent="MainMenu"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1688, 859.24)
+scale = Vector2(6.78, 6.78)
+sprite_frames = SubResource("SpriteFrames_44ucq")
+animation = &"idle"
+script = ExtResource("3_gknal")
+
+[node name="PlayButton" type="Button" parent="MainMenu/ChickenPlayButton"]
+offset_left = -6.63717
+offset_top = -5.60472
+offset_right = 5.36283
+offset_bottom = 6.39528
+theme = ExtResource("4_0vqnh")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayText" type="Sprite2D" parent="MainMenu/ChickenPlayButton"]
+texture_filter = 1
+position = Vector2(16, 3)
+scale = Vector2(0.532448, 0.532448)
+texture = ExtResource("1_yf6yh")
+
+[node name="ChickenQuitButton" type="AnimatedSprite2D" parent="MainMenu"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1688, 1009)
+scale = Vector2(6.78, 6.78)
+sprite_frames = SubResource("SpriteFrames_44ucq")
+animation = &"idle"
+script = ExtResource("5_1rrbw")
+
+[node name="QuitButton" type="Button" parent="MainMenu/ChickenQuitButton"]
+offset_left = -6.63717
+offset_top = -5.60472
+offset_right = 5.36283
+offset_bottom = 6.39528
+theme = ExtResource("4_0vqnh")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitText" type="Sprite2D" parent="MainMenu/ChickenQuitButton"]
+texture_filter = 1
+position = Vector2(16, 1.77)
+scale = Vector2(0.532448, 0.532448)
+texture = ExtResource("7_jcjb3")
+
+[connection signal="mouse_entered" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_mouse_exited"]
+[connection signal="pressed" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_pressed"]
