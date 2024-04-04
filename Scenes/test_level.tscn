@@ -1576,12 +1576,8 @@ position = Vector2(2064, 12)
 scale = Vector2(6.355, 0.495)
 
 [node name="Player" parent="." instance=ExtResource("2_uysdt")]
-
-coyoteTime = 0.3
-
 unique_name_in_owner = true
 position = Vector2(-567, 31)
-
 
 [node name="BaseChicken" parent="." instance=ExtResource("4_c6fwi")]
 position = Vector2(383, -24)
