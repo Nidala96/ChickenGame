@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://2qlfxghdhu57" path="res://Assets/secret_text_4.png" id="6_yr7ky"]
 [ext_resource type="Texture2D" uid="uid://b14puingrryoy" path="res://Assets/secret_text_5.png" id="7_0eaym"]
 [ext_resource type="Texture2D" uid="uid://7jb6popfvuv4" path="res://Assets/So.png" id="7_88kxi"]
-[ext_resource type="PackedScene" path="res://Scenes/spike.tscn" id="13_2xv6o"]
+[ext_resource type="PackedScene" uid="uid://bhwtvnijpq61y" path="res://Scenes/spike.tscn" id="13_2xv6o"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_6bf4w"]
 tile_data = PackedInt32Array(0, 10, 0, 65536, 393226, 1)

@@ -9,9 +9,12 @@ var shotgunSprite
 var canFire = true
 var fireFramesCurrent
 
+var gunshotSound := AudioStreamPlayer.new()
+
 func _ready():
 	node2d = %BulletSpawnPoint
 	shotgunSprite = %ShotgunSprite
+	add_child(gunshotSound)
 	
 				
 func _physics_process(delta):
@@ -29,8 +32,11 @@ func _input(event):
 		shoot()
 		
 		
+		
 
 func shoot():
+	gunshotSound.stream = load("res://Sound/SFX/gunshot.ogg")
+	gunshotSound.play()
 	var bullet = bulletSceen.instantiate() as Bullet
 	get_tree().root.add_child(bullet)
 	var move_direction = (get_global_mouse_position() - global_position).normalized()
