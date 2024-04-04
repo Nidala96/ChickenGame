@@ -15,8 +15,13 @@ func _ready():
 	
 				
 func _physics_process(delta):
+	if Global.gunEvent:	
+		set_process_input(true)
+		shotgunSprite.show()
+	else:
+		shotgunSprite.hide()
+		set_process_input(false)
 	var mousePosition = get_global_mouse_position()
-	
 	look_at(mousePosition)
 	if cdTimer.is_stopped():
 		shotgunSprite.rotation_degrees = 0
@@ -27,7 +32,6 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("shoot") && cdTimer.is_stopped():
 		shoot()
-		
 		
 
 func shoot():

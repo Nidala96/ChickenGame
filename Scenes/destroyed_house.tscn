@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://j3tbmkdl8og5"]
+[gd_scene load_steps=17 format=3 uid="uid://ciia2by36cjxl"]
 
 [ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_o7s4e"]
 [ext_resource type="Texture2D" uid="uid://bmxun4hd8qqxt" path="res://Assets/destroyed_house.png" id="2_ymhst"]
@@ -10,8 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://bjbk3qeyiwycf" path="res://Assets/flower.png" id="8_yavpj"]
 [ext_resource type="Texture2D" uid="uid://d1817ch7oacs1" path="res://Assets/shotgun.png" id="9_rgfpj"]
 [ext_resource type="Texture2D" uid="uid://cj1s06i4g7gra" path="res://Assets/painting_a.png" id="10_day58"]
+[ext_resource type="Script" path="res://Scenes/ShotgunArea.gd" id="10_uxiob"]
 [ext_resource type="Texture2D" uid="uid://qiib8al0qtm4" path="res://Assets/painting_b.png" id="11_jln2d"]
 [ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="12_5e1wn"]
+[ext_resource type="Script" path="res://Scenes/Door.gd" id="13_26vvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1wyu"]
+size = Vector2(8.74083, 4.49174)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afy06"]
+size = Vector2(9, 14)
 
 [node name="House" type="Node2D"]
 
@@ -76,11 +84,19 @@ position = Vector2(-1, -227)
 texture = ExtResource("8_yavpj")
 
 [node name="Shotgun" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(32, -231)
 rotation = -1.15192
 scale = Vector2(1.29, 1.29)
 texture = ExtResource("9_rgfpj")
+
+[node name="ShotgunArea" type="Area2D" parent="Shotgun"]
+script = ExtResource("10_uxiob")
+
+[node name="GunCollision" type="CollisionShape2D" parent="Shotgun/ShotgunArea"]
+position = Vector2(-0.198944, -0.0387993)
+shape = SubResource("RectangleShape2D_l1wyu")
 
 [node name="PaintingA" type="Sprite2D" parent="."]
 z_index = -150
@@ -122,3 +138,10 @@ texture_filter = 1
 position = Vector2(49, -277)
 scale = Vector2(-1, 1)
 texture = ExtResource("12_5e1wn")
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("13_26vvm")
+
+[node name="DoorCollision" type="CollisionShape2D" parent="Door"]
+position = Vector2(175.5, -230)
+shape = SubResource("RectangleShape2D_afy06")
