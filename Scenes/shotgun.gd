@@ -35,6 +35,7 @@ func _input(event):
 		
 
 func shoot():
+	#Handle SFX
 	gunshotSound.stream = load("res://Sound/SFX/gunshot.ogg")
 	gunshotSound.play()
 	var bullet = bulletSceen.instantiate() as Bullet
