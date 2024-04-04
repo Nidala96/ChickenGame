@@ -11,7 +11,7 @@ var move_direction: Vector2 = Vector2.ZERO
 
 func _process(delta):
 	#if get_parent().velocity != Vector2.ZERO:  
-	print(player)  
+	#print(player)  
 	global_position += move_direction * delta * speed * 2
 	await get_tree().create_timer(bulletDuration).timeout
 	queue_free()

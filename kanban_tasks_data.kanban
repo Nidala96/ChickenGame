@@ -97,7 +97,7 @@
 				},
 				{
 					"details": "jumping force modulation",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "walk and run logic",
@@ -121,7 +121,7 @@
 				},
 				{
 					"details": "shooting animation",
-					"done": false
+					"done": true
 				}
 			]
 		},
