@@ -37,7 +37,6 @@ layer_0/tile_data = PackedInt32Array(458745, 3, 5, 458746, 65539, 5, 458747, 131
 
 [node name="Player" parent="." instance=ExtResource("3_vnf01")]
 position = Vector2(79, 78)
-coyoteTime = 0.3
 
 [node name="Spike" parent="." instance=ExtResource("4_an78l")]
 position = Vector2(-1185, 364)

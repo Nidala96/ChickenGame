@@ -14,6 +14,11 @@ var gotHit = false
 var JumpAvailable = false
 var isDead = false
 var isWalking = false
+
+var playerSound := AudioStreamPlayer.new()
+
+func _ready():
+	add_child(playerSound)
 	
 	
 #movement and physics
@@ -85,6 +90,9 @@ func gravity(delta):
 		
 func player_take_damage(damage):
 	playerHealth -= damage
+	#Handle SFX
+	playerSound.stream = load("res://Sound/SFX/player_hurt.ogg")
+	playerSound.play()
 	gotHit = true
 	
 func Coyote_Timeout():

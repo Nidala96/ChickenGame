@@ -10,9 +10,7 @@
 		{
 			"uuid": "adf25941-3be8-4458-b376-79a1bd53ef8a",
 			"title": "Todo",
-			"tasks": [
-				"9a99f772-07dd-4a13-9c63-6e33d72b5d0c"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "21611780-5389-4267-94b7-444852627c27",
@@ -20,12 +18,9 @@
 			"tasks": [
 				"1a0b845d-5ee9-45d0-9cc1-dff446ddd52d",
 				"f025d4b1-5da8-4d3d-a18f-f0e2c3c9ec3d",
-				"8f5ef552-4f43-401e-a5c2-913976cd9165",
 				"6900e967-291a-4f00-b161-ee45d546d9f9",
 				"25277e97-2e5a-402a-b06d-f86a797f1708",
-				"7889d9c9-44db-4920-83d0-15a0490c2d79",
-				"1a93bc08-db18-47b2-a510-7c60bb656dfc",
-				"844126c8-be35-486f-a973-7c333a3233f2"
+				"9a99f772-07dd-4a13-9c63-6e33d72b5d0c"
 			]
 		},
 		{
@@ -34,7 +29,9 @@
 			"tasks": [
 				"0fb8db31-c476-4747-a88c-54292508cf39",
 				"29fe00d1-4994-4da1-8996-28a9099907ea",
-				"91431b9f-345e-435c-b33d-e512df58cfe9"
+				"91431b9f-345e-435c-b33d-e512df58cfe9",
+				"1a93bc08-db18-47b2-a510-7c60bb656dfc",
+				"8f5ef552-4f43-401e-a5c2-913976cd9165"
 			]
 		}
 	],
@@ -93,7 +90,7 @@
 			"steps": [
 				{
 					"details": "shooting bullet polish",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "jumping force modulation",
@@ -192,22 +189,8 @@
 			"steps": []
 		},
 		{
-			"uuid": "7889d9c9-44db-4920-83d0-15a0490c2d79",
-			"title": "Chicken Hit and Death: make the chicken sprite vibrate when they take damage ",
-			"description": "",
-			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
-			"steps": []
-		},
-		{
 			"uuid": "1a93bc08-db18-47b2-a510-7c60bb656dfc",
 			"title": "Bullet traveling half the distance while moving",
-			"description": "",
-			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
-			"steps": []
-		},
-		{
-			"uuid": "844126c8-be35-486f-a973-7c333a3233f2",
-			"title": "Movement acceleration and deceleration(starting and stopping)",
 			"description": "",
 			"category": "289c8e4b-0ea0-4fb3-950c-f86e632fe184",
 			"steps": []

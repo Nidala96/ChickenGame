@@ -7,6 +7,8 @@ extends CharacterBody2D
 
 @onready var hitBox = %HitBox
 
+var chickenSound := AudioStreamPlayer.new()
+
 var motion : Vector2 = Vector2()
 var left : Vector2 = Vector2(-1,0)
 var right : Vector2 = Vector2(1,0)
@@ -15,6 +17,9 @@ var direction = right
 var gotHit : bool = false
 var invincible : bool = false
 var isDead = false
+
+func _ready():
+	add_child(chickenSound)
 
 func _physics_process(delta):
 	animation_states()
@@ -67,9 +72,17 @@ func _on_hurt_box_body_entered(body):
 
 func chicken_take_damage(bulletDamage):
 	if isDead == false:
+		#Handle SFX
+		chickenSound.stream = load("res://Sound/SFX/chichen_hurt_1.ogg")
+		chickenSound.play()
 		healthPoints -= bulletDamage
 		print(healthPoints)
 		gotHit = true
+		
+		if healthPoints <= 0:
+			chickenSound.stream = load("res://Sound/SFX/chicken_dead_1.ogg")
+			chickenSound.play()
+
 	else:
 		return
 
