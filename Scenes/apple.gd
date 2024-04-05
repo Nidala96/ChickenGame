@@ -22,6 +22,7 @@ func _on_area_2d_body_entered(body):
 			Global.eventSoundPlayed = true
 			print(Global.eventSoundPlayed)
 			play_event_sound()
+			AudioManager.stop()
 		appleSprite.hide()
 		
 func play_apple_sound():

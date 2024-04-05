@@ -1,18 +1,20 @@
-extends Node2D
+extends Node
 
-var eventSound := AudioStreamPlayer.new()
-var chickenEventSound = true
+var num_players = 8
+var bus = "master"
+
+var available = []  # The available players.
+var queue = []  # The queue of sounds to play.
+var player = AudioStreamPlayer.new()
 
 func _ready():
-	add_child(eventSound)
-	
-	
-#func _process(delta):
-	#if Global.chickenEvent && chickenEventSound:
-		#eventSound.stream = load ("res://Sound/SFX/chicken_shots.ogg")
-		#print("chicken shot")
-		#eventSound.play()
-		#await get_tree().create_timer(1).timeout
-		#chickenEventSound = false
-	#else:
-		#return
+		add_child(player)
+		
+func stop():
+	player.stop()
+
+func play(sound_path):
+	player.stream = load(sound_path)
+	player.play()
+
+

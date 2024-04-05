@@ -11,10 +11,11 @@ func _ready():
 func _on_play_button_pressed():
 	buttonPressed = true
 	%ChickenPlayButton.play("dead")
-	chickenSound.stream = load("res://Sound/SFX/chichen_dead_1.ogg")
+	chickenSound.stream = load("res://Sound/SFX/chicken_dead_1.ogg")
 	chickenSound.play()
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/house.tscn")
+	AudioManager.play("res://Sound/Soundtracks/beginning.ogg")
 
 func _on_play_button_mouse_entered():
 	if buttonPressed == false:
