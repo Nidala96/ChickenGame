@@ -108,6 +108,7 @@ shape = SubResource("RectangleShape2D_7vm6i")
 [node name="HurtBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+unique_name_in_owner = true
 position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_4eqix")
 
