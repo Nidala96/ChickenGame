@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b16p7ny1l4xib"]
+[gd_scene load_steps=11 format=3 uid="uid://b16p7ny1l4xib"]
 
 [ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_h5m2k"]
 [ext_resource type="Texture2D" uid="uid://uivaue4ardo8" path="res://Assets/house.png" id="2_vfem0"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dqdcc04kf6e45" path="res://Assets/mom.png" id="5_llwcp"]
 [ext_resource type="Texture2D" uid="uid://dncbwemed00t3" path="res://Assets/dad.png" id="6_c8nec"]
 [ext_resource type="Script" path="res://Scenes/Door.gd" id="7_ttxxe"]
+[ext_resource type="Texture2D" uid="uid://ng3kmxq6ogru" path="res://Assets/sweetie.png" id="8_e10wm"]
+[ext_resource type="PackedScene" uid="uid://b4fjepl7jfprb" path="res://audio_manager.tscn" id="9_bqyyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bb6pw"]
 size = Vector2(9, 15)
@@ -43,12 +45,12 @@ scale = Vector2(11.2, 1)
 
 [node name="Mom" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(73, -229)
+position = Vector2(159, -229)
 texture = ExtResource("5_llwcp")
 
 [node name="Dad" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(146, -229)
+position = Vector2(74, -229)
 texture = ExtResource("6_c8nec")
 
 [node name="Door" type="Area2D" parent="."]
@@ -58,3 +60,11 @@ script = ExtResource("7_ttxxe")
 [node name="DoorCollider" type="CollisionShape2D" parent="Door"]
 position = Vector2(9.63158, 74.4904)
 shape = SubResource("RectangleShape2D_bb6pw")
+
+[node name="Sweetie" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(164, -248)
+scale = Vector2(0.284314, 0.284314)
+texture = ExtResource("8_e10wm")
+
+[node name="AudioManager" parent="." instance=ExtResource("9_bqyyr")]
