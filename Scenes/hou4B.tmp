@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Door.gd" id="7_ttxxe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bb6pw"]
-size = Vector2(9, 15)
+size = Vector2(9, 16)
 
 [node name="House" type="Node2D"]
 
@@ -56,5 +56,5 @@ position = Vector2(165.868, -303.99)
 script = ExtResource("7_ttxxe")
 
 [node name="DoorCollider" type="CollisionShape2D" parent="Door"]
-position = Vector2(9.63158, 74.4904)
+position = Vector2(9.63158, 74.9904)
 shape = SubResource("RectangleShape2D_bb6pw")

@@ -11,12 +11,22 @@ config_version=5
 [application]
 
 config/name="Chicken Game"
+run/main_scene="res://Scenes/destroyed_house.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Scenes/global_variables.gd"
+
 [display]
 
-window/size/mode=3
+window/size/mode=4
+window/size/initial_position_type=0
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+window/stretch/scale=0.6
 mouse_cursor/custom_image="res://Assets/crosshair_scaled_10x_pngcrushed.png"
 mouse_cursor/custom_image_hotspot=Vector2(80, 80)
 mouse_cursor/tooltip_position_offset=Vector2(30, 30)
@@ -61,4 +71,11 @@ walk={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
+}
+
+[shader_globals]
+
+chickenEvent={
+"type": "bool",
+"value": true
 }

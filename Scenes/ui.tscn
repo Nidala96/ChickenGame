@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://cuo5q2m067u64"]
+[gd_scene load_steps=18 format=3 uid="uid://c7a06o4oi3if7"]
 
 [ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="1_kcnm7"]
 [ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_m30y5"]
 [ext_resource type="Texture2D" uid="uid://c8gssjpqsjlcj" path="res://Assets/play_text.png" id="1_yf6yh"]
 [ext_resource type="Script" path="res://Scenes/ChickenPlayButton.gd" id="3_gknal"]
-[ext_resource type="Theme" uid="uid://dlv0w2n2xe6v5" path="res://Scenes/button_theme.tres" id="4_0vqnh"]
+[ext_resource type="Theme" path="res://Scenes/button_theme.tres" id="4_0vqnh"]
 [ext_resource type="Script" path="res://Scenes/ChickenQuit.gd" id="5_1rrbw"]
 [ext_resource type="Texture2D" uid="uid://baq6x17kufp3n" path="res://Assets/quit_text.png" id="7_jcjb3"]
 [ext_resource type="PackedScene" uid="uid://c4wpwp6ub07s8" path="res://Scenes/tile_map.tscn" id="8_3gfuy"]
@@ -79,15 +79,14 @@ animations = [{
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="MainMenu" type="Node2D" parent="."]
+[node name="mainMenu" type="Node2D" parent="."]
 
-[node name="Background" type="ColorRect" parent="MainMenu"]
+[node name="Background" type="ColorRect" parent="mainMenu"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0.105882, 0.12549, 1)
-metadata/_edit_lock_ = true
 
-[node name="ChickenPlayButton" type="AnimatedSprite2D" parent="MainMenu"]
+[node name="ChickenPlayButton" type="AnimatedSprite2D" parent="mainMenu"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(1688, 859.24)
@@ -96,7 +95,7 @@ sprite_frames = SubResource("SpriteFrames_44ucq")
 animation = &"idle"
 script = ExtResource("3_gknal")
 
-[node name="PlayButton" type="Button" parent="MainMenu/ChickenPlayButton"]
+[node name="PlayButton" type="Button" parent="mainMenu/ChickenPlayButton"]
 offset_left = -6.63717
 offset_top = -5.60472
 offset_right = 5.36283
@@ -105,13 +104,13 @@ theme = ExtResource("4_0vqnh")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayText" type="Sprite2D" parent="MainMenu/ChickenPlayButton"]
+[node name="PlayText" type="Sprite2D" parent="mainMenu/ChickenPlayButton"]
 texture_filter = 1
 position = Vector2(16, 3)
 scale = Vector2(0.532448, 0.532448)
 texture = ExtResource("1_yf6yh")
 
-[node name="ChickenQuitButton" type="AnimatedSprite2D" parent="MainMenu"]
+[node name="ChickenQuitButton" type="AnimatedSprite2D" parent="mainMenu"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(1688, 1009)
@@ -120,7 +119,7 @@ sprite_frames = SubResource("SpriteFrames_44ucq")
 animation = &"idle"
 script = ExtResource("5_1rrbw")
 
-[node name="QuitButton" type="Button" parent="MainMenu/ChickenQuitButton"]
+[node name="QuitButton" type="Button" parent="mainMenu/ChickenQuitButton"]
 offset_left = -6.63717
 offset_top = -5.60472
 offset_right = 5.36283
@@ -129,382 +128,382 @@ theme = ExtResource("4_0vqnh")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="QuitText" type="Sprite2D" parent="MainMenu/ChickenQuitButton"]
+[node name="QuitText" type="Sprite2D" parent="mainMenu/ChickenQuitButton"]
 texture_filter = 1
 position = Vector2(16, 1.77)
 scale = Vector2(0.532448, 0.532448)
 texture = ExtResource("7_jcjb3")
 
-[node name="TileMap" parent="MainMenu" instance=ExtResource("8_3gfuy")]
+[node name="TileMap" parent="mainMenu" instance=ExtResource("8_3gfuy")]
 layer_0/tile_data = PackedInt32Array(131072, 65537, 0, 131073, 131073, 0, 131074, 196609, 0, 131075, 65537, 0, 131076, 131073, 0, 131077, 196609, 0, 131078, 65537, 0, 131079, 131073, 0, 131080, 196609, 0, 131081, 65537, 0, 131082, 131073, 0, 131083, 196609, 0, 131084, 65537, 0, 131085, 131073, 0, 131086, 196609, 0, 131087, 65537, 0, 131088, 131073, 0, 131089, 196609, 0, 131090, 65537, 0, 131091, 131073, 0, 131092, 196609, 0, 131093, 65537, 0, 131094, 131073, 0, 131095, 196609, 0, 131096, 65537, 0, 131097, 131073, 0, 131098, 196609, 0, 131099, 65537, 0, 131100, 131073, 0, 131101, 196609, 0, 131102, 65537, 0, 131103, 131073, 0, 131104, 196609, 0, 131105, 65537, 0, 131106, 131073, 0, 131107, 196609, 0, 131108, 65537, 0, 131109, 131073, 0, 131110, 196609, 0, 131111, 65537, 0, 131112, 131073, 0, 131113, 196609, 0, 131114, 65537, 0, 131115, 131073, 0, 131116, 196609, 0, 131117, 65537, 0, 131118, 131073, 0, 131119, 196609, 0, 131120, 65537, 0, 131121, 131073, 0, 131122, 196609, 0, 131123, 65537, 0, 131124, 131073, 0, 131125, 196609, 0, 131126, 65537, 0, 131127, 131073, 0, 131128, 196609, 0, 131129, 65537, 0, 131130, 131073, 0, 131131, 196609, 0, 131132, 65537, 0, 131133, 131073, 0, 131134, 196609, 0, 131135, 65537, 0, 131136, 131073, 0, 131137, 196609, 0, 131138, 65537, 0, 131139, 131073, 0, 131140, 196609, 0, 131141, 65537, 0, 131142, 131073, 0, 131143, 196609, 0, 131144, 65537, 0, 131145, 131073, 0, 131146, 196609, 0, 131147, 65537, 0, 131148, 131073, 0, 131149, 196609, 0, 131150, 65537, 0, 131151, 131073, 0, 131152, 196609, 0, 131153, 65537, 0, 131154, 131073, 0, 131155, 196609, 0, 131156, 65537, 0, 131157, 131073, 0, 131158, 196609, 0, 131159, 65537, 0, 131160, 131073, 0, 131161, 196609, 0, 131162, 65537, 0, 131163, 131073, 0, 131164, 196609, 0, 131165, 65537, 0, 131166, 131073, 0, 131167, 196609, 0, 131168, 65537, 0, 131169, 131073, 0, 131170, 196609, 0, 131171, 65537, 0, 131172, 131073, 0, 131173, 196609, 0, 131174, 65537, 0, 131175, 131073, 0, 131176, 196609, 0, 131177, 65537, 0, 131178, 131073, 0, 131179, 196609, 0, 131180, 65537, 0, 131181, 131073, 0, 131182, 196609, 0, 131183, 65537, 0, 131184, 131073, 0, 131185, 196609, 0, 131186, 65537, 0, 131187, 131073, 0, 131188, 196609, 0, 131189, 65537, 0, 131190, 131073, 0, 131191, 196609, 0, 65656, 1, 0, 131192, 393217, 1, 196607, 327681, 1, 131071, 262145, 0)
 
-[node name="BaseChicken" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(114.013, 23.939)
 rotation = -0.000534919
 
-[node name="BaseChicken3" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken3" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(180.013, 23.9037)
 rotation = -0.000534919
 
-[node name="BaseChicken4" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken4" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(245.013, 23.8689)
 rotation = -0.000534919
 
-[node name="BaseChicken5" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken5" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(306.013, 23.8363)
 rotation = -0.000534919
 
-[node name="BaseChicken6" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken6" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(418.013, 23.7764)
 rotation = -0.000534919
 
-[node name="BaseChicken7" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken7" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(368.013, 23.8031)
 rotation = -0.000534919
 
-[node name="BaseChicken8" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken8" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(501.013, 23.732)
 rotation = -0.000534919
 
-[node name="BaseChicken9" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken9" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(610.013, 23.6737)
 rotation = -0.000534919
 
-[node name="BaseChicken10" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken10" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(679.013, 23.6368)
 rotation = -0.000534919
 
-[node name="BaseChicken11" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken11" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(777.013, 23.5844)
 rotation = -0.000534919
 
-[node name="BaseChicken12" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken12" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(866.013, 23.5368)
 rotation = -0.000534919
 
-[node name="BaseChicken13" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken13" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(951.013, 24.4913)
 rotation = -0.000534919
 
-[node name="BaseChicken15" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken15" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1144.01, 23.388)
 rotation = -0.000534919
 
-[node name="BaseChicken16" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken16" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1232.01, 23.341)
 rotation = -0.000534919
 
-[node name="BaseChicken17" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken17" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1324.01, 23.2918)
 rotation = -0.000534919
 
-[node name="BaseChicken18" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken18" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1426.01, 24.2372)
 rotation = -0.000534919
 
-[node name="BaseChicken19" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken19" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1533.01, 24.18)
 rotation = -0.000534919
 
-[node name="BaseChicken20" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken20" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1660.01, 24.112)
 rotation = -0.000534919
 
-[node name="BaseChicken21" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken21" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1833.01, 24.0195)
 rotation = -0.000534919
 
-[node name="BaseChicken22" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken22" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1904.01, 23.9815)
 rotation = -0.000534919
 
-[node name="BaseChicken14" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken14" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(1056.01, 23.4351)
 rotation = -0.000534919
 
-[node name="BaseChicken2" parent="MainMenu/TileMap" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken2" parent="mainMenu/TileMap" instance=ExtResource("9_ux28p")]
 position = Vector2(82.0128, 23.9561)
 rotation = -0.000534919
 
-[node name="TileMap2" parent="MainMenu" instance=ExtResource("8_3gfuy")]
+[node name="TileMap2" parent="mainMenu" instance=ExtResource("8_3gfuy")]
 position = Vector2(0, 89)
 layer_0/tile_data = PackedInt32Array(131072, 65537, 0, 131073, 131073, 0, 131074, 196609, 0, 131075, 65537, 0, 131076, 131073, 0, 131077, 196609, 0, 131078, 65537, 0, 131079, 131073, 0, 131080, 196609, 0, 131081, 65537, 0, 131082, 131073, 0, 131083, 196609, 0, 131084, 65537, 0, 131085, 131073, 0, 131086, 196609, 0, 131087, 65537, 0, 131088, 131073, 0, 131089, 196609, 0, 131090, 65537, 0, 131091, 131073, 0, 131092, 196609, 0, 131093, 65537, 0, 131094, 131073, 0, 131095, 196609, 0, 131096, 65537, 0, 131097, 131073, 0, 131098, 196609, 0, 131099, 65537, 0, 131100, 131073, 0, 131101, 196609, 0, 131102, 65537, 0, 131103, 131073, 0, 131104, 196609, 0, 131105, 65537, 0, 131106, 131073, 0, 131107, 196609, 0, 131108, 65537, 0, 131109, 131073, 0, 131110, 196609, 0, 131111, 65537, 0, 131112, 131073, 0, 131113, 196609, 0, 131114, 65537, 0, 131115, 131073, 0, 131116, 196609, 0, 131117, 65537, 0, 131118, 131073, 0, 131119, 196609, 0, 131120, 65537, 0, 131121, 131073, 0, 131122, 196609, 0, 131123, 65537, 0, 131124, 131073, 0, 131125, 196609, 0, 131126, 65537, 0, 131127, 131073, 0, 131128, 196609, 0, 131129, 65537, 0, 131130, 131073, 0, 131131, 196609, 0, 131132, 65537, 0, 131133, 131073, 0, 131134, 196609, 0, 131135, 65537, 0, 131136, 131073, 0, 131137, 196609, 0, 131138, 65537, 0, 131139, 131073, 0, 131140, 196609, 0, 131141, 65537, 0, 131142, 131073, 0, 131143, 196609, 0, 131144, 65537, 0, 131145, 131073, 0, 131146, 196609, 0, 131147, 65537, 0, 131148, 131073, 0, 131149, 196609, 0, 131150, 65537, 0, 131151, 131073, 0, 131152, 196609, 0, 131153, 65537, 0, 131154, 131073, 0, 131155, 196609, 0, 131156, 65537, 0, 131157, 131073, 0, 131158, 196609, 0, 131159, 65537, 0, 131160, 131073, 0, 131161, 196609, 0, 131162, 65537, 0, 131163, 131073, 0, 131164, 196609, 0, 131165, 65537, 0, 131166, 131073, 0, 131167, 196609, 0, 131168, 65537, 0, 131169, 131073, 0, 131170, 196609, 0, 131171, 65537, 0, 131172, 131073, 0, 131173, 196609, 0, 131174, 65537, 0, 131175, 131073, 0, 131176, 196609, 0, 131177, 65537, 0, 131178, 131073, 0, 131179, 196609, 0, 131180, 65537, 0, 131181, 131073, 0, 131182, 196609, 0, 131183, 65537, 0, 131184, 131073, 0, 131185, 196609, 0, 131186, 65537, 0, 131187, 131073, 0, 131188, 196609, 0, 131189, 65537, 0, 131190, 131073, 0, 131191, 196609, 0, 65656, 1, 0, 131192, 393217, 1, 196607, 327681, 1, 131071, 262145, 0)
 
-[node name="BaseChicken" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(114.013, 23.939)
 rotation = -0.000534919
 
-[node name="BaseChicken3" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken3" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(180.013, 23.9037)
 rotation = -0.000534919
 
-[node name="BaseChicken4" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken4" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(245.013, 23.8689)
 rotation = -0.000534919
 
-[node name="BaseChicken5" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken5" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(306.013, 23.8363)
 rotation = -0.000534919
 
-[node name="BaseChicken6" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken6" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(418.013, 23.7764)
 rotation = -0.000534919
 
-[node name="BaseChicken7" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken7" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(368.013, 23.8031)
 rotation = -0.000534919
 
-[node name="BaseChicken8" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken8" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(501.013, 23.732)
 rotation = -0.000534919
 
-[node name="BaseChicken9" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken9" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(610.013, 23.6737)
 rotation = -0.000534919
 
-[node name="BaseChicken10" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken10" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(679.013, 23.6368)
 rotation = -0.000534919
 
-[node name="BaseChicken11" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken11" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(777.013, 23.5844)
 rotation = -0.000534919
 
-[node name="BaseChicken12" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken12" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(866.013, 23.5368)
 rotation = -0.000534919
 
-[node name="BaseChicken13" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken13" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(951.013, 24.4913)
 rotation = -0.000534919
 
-[node name="BaseChicken15" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken15" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1144.01, 23.388)
 rotation = -0.000534919
 
-[node name="BaseChicken16" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken16" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1232.01, 23.341)
 rotation = -0.000534919
 
-[node name="BaseChicken17" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken17" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1324.01, 23.2918)
 rotation = -0.000534919
 
-[node name="BaseChicken18" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken18" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1426.01, 24.2372)
 rotation = -0.000534919
 
-[node name="BaseChicken19" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken19" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1533.01, 24.18)
 rotation = -0.000534919
 
-[node name="BaseChicken20" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken20" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1660.01, 24.112)
 rotation = -0.000534919
 
-[node name="BaseChicken21" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken21" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1833.01, 24.0195)
 rotation = -0.000534919
 
-[node name="BaseChicken22" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken22" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1904.01, 23.9815)
 rotation = -0.000534919
 
-[node name="BaseChicken14" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken14" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(1056.01, 23.4351)
 rotation = -0.000534919
 
-[node name="BaseChicken2" parent="MainMenu/TileMap2" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken2" parent="mainMenu/TileMap2" instance=ExtResource("9_ux28p")]
 position = Vector2(82.0128, 23.9561)
 rotation = -0.000534919
 
-[node name="TileMap3" parent="MainMenu" instance=ExtResource("8_3gfuy")]
+[node name="TileMap3" parent="mainMenu" instance=ExtResource("8_3gfuy")]
 position = Vector2(-3.72529e-09, 183)
 layer_0/tile_data = PackedInt32Array(131072, 65537, 0, 131073, 131073, 0, 131074, 196609, 0, 131075, 65537, 0, 131076, 131073, 0, 131077, 196609, 0, 131078, 65537, 0, 131079, 131073, 0, 131080, 196609, 0, 131081, 65537, 0, 131082, 131073, 0, 131083, 196609, 0, 131084, 65537, 0, 131085, 131073, 0, 131086, 196609, 0, 131087, 65537, 0, 131088, 131073, 0, 131089, 196609, 0, 131090, 65537, 0, 131091, 131073, 0, 131092, 196609, 0, 131093, 65537, 0, 131094, 131073, 0, 131095, 196609, 0, 131096, 65537, 0, 131097, 131073, 0, 131098, 196609, 0, 131099, 65537, 0, 131100, 131073, 0, 131101, 196609, 0, 131102, 65537, 0, 131103, 131073, 0, 131104, 196609, 0, 131105, 65537, 0, 131106, 131073, 0, 131107, 196609, 0, 131108, 65537, 0, 131109, 131073, 0, 131110, 196609, 0, 131111, 65537, 0, 131112, 131073, 0, 131113, 196609, 0, 131114, 65537, 0, 131115, 131073, 0, 131116, 196609, 0, 131117, 65537, 0, 131118, 131073, 0, 131119, 196609, 0, 131120, 65537, 0, 131121, 131073, 0, 131122, 196609, 0, 131123, 65537, 0, 131124, 131073, 0, 131125, 196609, 0, 131126, 65537, 0, 131127, 131073, 0, 131128, 196609, 0, 131129, 65537, 0, 131130, 131073, 0, 131131, 196609, 0, 131132, 65537, 0, 131133, 131073, 0, 131134, 196609, 0, 131135, 65537, 0, 131136, 131073, 0, 131137, 196609, 0, 131138, 65537, 0, 131139, 131073, 0, 131140, 196609, 0, 131141, 65537, 0, 131142, 131073, 0, 131143, 196609, 0, 131144, 65537, 0, 131145, 131073, 0, 131146, 196609, 0, 131147, 65537, 0, 131148, 131073, 0, 131149, 196609, 0, 131150, 65537, 0, 131151, 131073, 0, 131152, 196609, 0, 131153, 65537, 0, 131154, 131073, 0, 131155, 196609, 0, 131156, 65537, 0, 131157, 131073, 0, 131158, 196609, 0, 131159, 65537, 0, 131160, 131073, 0, 131161, 196609, 0, 131162, 65537, 0, 131163, 131073, 0, 131164, 196609, 0, 131165, 65537, 0, 131166, 131073, 0, 131167, 196609, 0, 131168, 65537, 0, 131169, 131073, 0, 131170, 196609, 0, 131171, 65537, 0, 131172, 131073, 0, 131173, 196609, 0, 131174, 65537, 0, 131175, 131073, 0, 131176, 196609, 0, 131177, 65537, 0, 131178, 131073, 0, 131179, 196609, 0, 131180, 65537, 0, 131181, 131073, 0, 131182, 196609, 0, 131183, 65537, 0, 131184, 131073, 0, 131185, 196609, 0, 131186, 65537, 0, 131187, 131073, 0, 131188, 196609, 0, 131189, 65537, 0, 131190, 131073, 0, 131191, 196609, 0, 65656, 1, 0, 131192, 393217, 1, 196607, 327681, 1, 131071, 262145, 0)
 
-[node name="BaseChicken" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(114.013, 23.939)
 rotation = -0.000534919
 
-[node name="BaseChicken3" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken3" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(180.013, 23.9037)
 rotation = -0.000534919
 
-[node name="BaseChicken4" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken4" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(245.013, 23.8689)
 rotation = -0.000534919
 
-[node name="BaseChicken5" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken5" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(306.013, 23.8363)
 rotation = -0.000534919
 
-[node name="BaseChicken6" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken6" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(418.013, 23.7764)
 rotation = -0.000534919
 
-[node name="BaseChicken7" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken7" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(368.013, 23.8031)
 rotation = -0.000534919
 
-[node name="BaseChicken8" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken8" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(501.013, 23.732)
 rotation = -0.000534919
 
-[node name="BaseChicken9" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken9" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(610.013, 23.6737)
 rotation = -0.000534919
 
-[node name="BaseChicken10" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken10" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(679.013, 23.6368)
 rotation = -0.000534919
 
-[node name="BaseChicken11" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken11" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(777.013, 23.5844)
 rotation = -0.000534919
 
-[node name="BaseChicken12" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken12" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(866.013, 23.5368)
 rotation = -0.000534919
 
-[node name="BaseChicken13" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken13" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(951.013, 24.4913)
 rotation = -0.000534919
 
-[node name="BaseChicken15" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken15" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1144.01, 23.388)
 rotation = -0.000534919
 
-[node name="BaseChicken16" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken16" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1232.01, 23.341)
 rotation = -0.000534919
 
-[node name="BaseChicken17" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken17" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1324.01, 23.2918)
 rotation = -0.000534919
 
-[node name="BaseChicken18" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken18" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1426.01, 24.2372)
 rotation = -0.000534919
 
-[node name="BaseChicken19" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken19" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1533.01, 24.18)
 rotation = -0.000534919
 
-[node name="BaseChicken20" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken20" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1660.01, 24.112)
 rotation = -0.000534919
 
-[node name="BaseChicken21" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken21" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1833.01, 24.0195)
 rotation = -0.000534919
 
-[node name="BaseChicken22" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken22" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1904.01, 23.9815)
 rotation = -0.000534919
 
-[node name="BaseChicken14" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken14" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(1056.01, 23.4351)
 rotation = -0.000534919
 
-[node name="BaseChicken2" parent="MainMenu/TileMap3" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken2" parent="mainMenu/TileMap3" instance=ExtResource("9_ux28p")]
 position = Vector2(82.0128, 23.9561)
 rotation = -0.000534919
 
-[node name="TileMap4" parent="MainMenu" instance=ExtResource("8_3gfuy")]
+[node name="TileMap4" parent="mainMenu" instance=ExtResource("8_3gfuy")]
 position = Vector2(3.72529e-09, 270)
 layer_0/tile_data = PackedInt32Array(131072, 65537, 0, 131073, 131073, 0, 131074, 196609, 0, 131075, 65537, 0, 131076, 131073, 0, 131077, 196609, 0, 131078, 65537, 0, 131079, 131073, 0, 131080, 196609, 0, 131081, 65537, 0, 131082, 131073, 0, 131083, 196609, 0, 131084, 65537, 0, 131085, 131073, 0, 131086, 196609, 0, 131087, 65537, 0, 131088, 131073, 0, 131089, 196609, 0, 131090, 65537, 0, 131091, 131073, 0, 131092, 196609, 0, 131093, 65537, 0, 131094, 131073, 0, 131095, 196609, 0, 131096, 65537, 0, 131097, 131073, 0, 131098, 196609, 0, 131099, 65537, 0, 131100, 131073, 0, 131101, 196609, 0, 131102, 65537, 0, 131103, 131073, 0, 131104, 196609, 0, 131105, 65537, 0, 131106, 131073, 0, 131107, 196609, 0, 131108, 65537, 0, 131109, 131073, 0, 131110, 196609, 0, 131111, 65537, 0, 131112, 131073, 0, 131113, 196609, 0, 131114, 65537, 0, 131115, 131073, 0, 131116, 196609, 0, 131117, 65537, 0, 131118, 131073, 0, 131119, 196609, 0, 131120, 65537, 0, 131121, 131073, 0, 131122, 196609, 0, 131123, 65537, 0, 131124, 131073, 0, 131125, 196609, 0, 131126, 65537, 0, 131127, 131073, 0, 131128, 196609, 0, 131129, 65537, 0, 131130, 131073, 0, 131131, 196609, 0, 131132, 65537, 0, 131133, 131073, 0, 131134, 196609, 0, 131135, 65537, 0, 131136, 131073, 0, 131137, 196609, 0, 131138, 65537, 0, 131139, 131073, 0, 131140, 196609, 0, 131141, 65537, 0, 131142, 131073, 0, 131143, 196609, 0, 131144, 65537, 0, 131145, 131073, 0, 131146, 196609, 0, 131147, 65537, 0, 131148, 131073, 0, 131149, 196609, 0, 131150, 65537, 0, 131151, 131073, 0, 131152, 196609, 0, 131153, 65537, 0, 131154, 131073, 0, 131155, 196609, 0, 131156, 65537, 0, 131157, 131073, 0, 131158, 196609, 0, 131159, 65537, 0, 131160, 131073, 0, 131161, 196609, 0, 131162, 65537, 0, 131163, 131073, 0, 131164, 196609, 0, 131165, 65537, 0, 131166, 131073, 0, 131167, 196609, 0, 131168, 65537, 0, 131169, 131073, 0, 131170, 196609, 0, 131171, 65537, 0, 131172, 131073, 0, 131173, 196609, 0, 131174, 65537, 0, 131175, 131073, 0, 131176, 196609, 0, 131177, 65537, 0, 131178, 131073, 0, 131179, 196609, 0, 131180, 65537, 0, 131181, 131073, 0, 131182, 196609, 0, 131183, 65537, 0, 131184, 131073, 0, 131185, 196609, 0, 131186, 65537, 0, 131187, 131073, 0, 131188, 196609, 0, 131189, 65537, 0, 131190, 131073, 0, 131191, 196609, 0, 65656, 1, 0, 131192, 393217, 1, 196607, 327681, 1, 131071, 262145, 0)
 
-[node name="BaseChicken" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(114.013, 23.939)
 rotation = -0.000534919
 
-[node name="BaseChicken3" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken3" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(180.013, 23.9037)
 rotation = -0.000534919
 
-[node name="BaseChicken4" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken4" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(245.013, 23.8689)
 rotation = -0.000534919
 
-[node name="BaseChicken5" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken5" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(306.013, 23.8363)
 rotation = -0.000534919
 
-[node name="BaseChicken6" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken6" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(418.013, 23.7764)
 rotation = -0.000534919
 
-[node name="BaseChicken7" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken7" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(368.013, 23.8031)
 rotation = -0.000534919
 
-[node name="BaseChicken8" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken8" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(501.013, 23.732)
 rotation = -0.000534919
 
-[node name="BaseChicken9" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken9" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(610.013, 23.6737)
 rotation = -0.000534919
 
-[node name="BaseChicken10" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken10" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(679.013, 23.6368)
 rotation = -0.000534919
 
-[node name="BaseChicken11" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken11" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(777.013, 23.5844)
 rotation = -0.000534919
 
-[node name="BaseChicken12" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken12" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(866.013, 23.5368)
 rotation = -0.000534919
 
-[node name="BaseChicken13" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken13" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(951.013, 24.4913)
 rotation = -0.000534919
 
-[node name="BaseChicken15" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken15" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1144.01, 23.388)
 rotation = -0.000534919
 
-[node name="BaseChicken16" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken16" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1232.01, 23.341)
 rotation = -0.000534919
 
-[node name="BaseChicken17" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken17" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1324.01, 23.2918)
 rotation = -0.000534919
 
-[node name="BaseChicken18" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken18" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1426.01, 24.2372)
 rotation = -0.000534919
 
-[node name="BaseChicken19" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken19" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1533.01, 24.18)
 rotation = -0.000534919
 
-[node name="BaseChicken20" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken20" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1660.01, 24.112)
 rotation = -0.000534919
 
-[node name="BaseChicken21" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken21" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1833.01, 24.0195)
 rotation = -0.000534919
 
-[node name="BaseChicken22" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken22" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1904.01, 23.9815)
 rotation = -0.000534919
 
-[node name="BaseChicken14" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken14" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(1056.01, 23.4351)
 rotation = -0.000534919
 
-[node name="BaseChicken2" parent="MainMenu/TileMap4" instance=ExtResource("9_ux28p")]
+[node name="BaseChicken2" parent="mainMenu/TileMap4" instance=ExtResource("9_ux28p")]
 position = Vector2(82.0128, 23.9561)
 rotation = -0.000534919
 
-[connection signal="mouse_entered" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_mouse_entered"]
-[connection signal="mouse_exited" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_mouse_exited"]
-[connection signal="pressed" from="MainMenu/ChickenPlayButton/PlayButton" to="MainMenu/ChickenPlayButton" method="_on_play_button_pressed"]
-[connection signal="mouse_entered" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_mouse_entered"]
-[connection signal="mouse_exited" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_mouse_exited"]
-[connection signal="pressed" from="MainMenu/ChickenQuitButton/QuitButton" to="MainMenu/ChickenQuitButton" method="_on_quit_button_pressed"]
+[connection signal="mouse_entered" from="mainMenu/ChickenPlayButton/PlayButton" to="mainMenu/ChickenPlayButton" method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="mainMenu/ChickenPlayButton/PlayButton" to="mainMenu/ChickenPlayButton" method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="mainMenu/ChickenPlayButton/PlayButton" to="mainMenu/ChickenPlayButton" method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="mainMenu/ChickenQuitButton/QuitButton" to="mainMenu/ChickenQuitButton" method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="mainMenu/ChickenQuitButton/QuitButton" to="mainMenu/ChickenQuitButton" method="_on_quit_button_mouse_exited"]
+[connection signal="pressed" from="mainMenu/ChickenQuitButton/QuitButton" to="mainMenu/ChickenQuitButton" method="_on_quit_button_pressed"]

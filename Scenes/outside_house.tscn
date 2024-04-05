@@ -1,12 +1,18 @@
 [gd_scene load_steps=8 format=3 uid="uid://bsxyqt4tuuthi"]
 
+
 [ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_245sv"]
 [ext_resource type="Texture2D" uid="uid://dk2bq2mi8omjo" path="res://Assets/outside_house.png" id="2_0ha6q"]
 [ext_resource type="PackedScene" uid="uid://c4wpwp6ub07s8" path="res://Scenes/tile_map.tscn" id="3_grsv8"]
 [ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="4_3a1x2"]
 [ext_resource type="PackedScene" uid="uid://b7ira5l2aknek" path="res://Scenes/background_chicken.tscn" id="5_2l0lq"]
-[ext_resource type="PackedScene" uid="uid://bg6dqdvgvlso1" path="res://Scenes/apple.tscn" id="6_0teo2"]
+
 [ext_resource type="PackedScene" uid="uid://blpbhlpfjtgx8" path="res://Scenes/base_chicken.tscn" id="7_tlmnt"]
+[ext_resource type="PackedScene" uid="uid://d1suv52v7yi8v" path="res://Scenes/apple.tscn" id="6_0teo2"]
+[ext_resource type="Script" path="res://Scenes/Door.gd" id="7_vf35a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d28as"]
+size = Vector2(10, 18)
 
 [node name="OutsideHouse" type="Node2D"]
 
@@ -60,6 +66,7 @@ position = Vector2(1015, -49.5)
 [node name="Apple4" parent="." instance=ExtResource("6_0teo2")]
 position = Vector2(1032, -49.5)
 
+
 [node name="BaseChicken" parent="." instance=ExtResource("7_tlmnt")]
 position = Vector2(1625, -72)
 
@@ -89,3 +96,11 @@ position = Vector2(2113, -161)
 
 [node name="BaseChicken10" parent="." instance=ExtResource("7_tlmnt")]
 position = Vector2(2208, -162)
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("7_vf35a")
+
+[node name="DoorCollision" type="CollisionShape2D" parent="Door"]
+position = Vector2(41, 7)
+shape = SubResource("RectangleShape2D_d28as")
+
