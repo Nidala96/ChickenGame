@@ -21,7 +21,7 @@ var isDead = false
 func _ready():
 	add_child(chickenSound)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	animation_states()
 	turn()
 	movement()

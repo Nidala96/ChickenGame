@@ -17,7 +17,7 @@ func _ready():
 	add_child(gunshotSound)
 	
 				
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Global.gunEvent:	
 		set_process_input(true)
 		shotgunSprite.show()
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	
 	
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("shoot") && cdTimer.is_stopped():
 		shoot()
 		
