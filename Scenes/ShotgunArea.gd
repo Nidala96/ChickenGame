@@ -9,3 +9,5 @@ func _process(delta):
 		print(get_overlapping_bodies().size())
 		Global.gunEvent = true
 		shotgunSprite.hide()
+	if Global.gunEvent:
+		shotgunSprite.hide()

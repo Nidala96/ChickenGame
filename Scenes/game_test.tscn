@@ -16,7 +16,6 @@ collision_mask = 3
 
 [node name="BaseChicken" parent="." instance=ExtResource("3_48wnu")]
 position = Vector2(51, -8)
-healthPoints = 100.0
 moveSpeed = 20.0
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_uqw5l")]
