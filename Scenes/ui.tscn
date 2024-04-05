@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7a06o4oi3if7"]
+[gd_scene load_steps=18 format=3 uid="uid://cuo5q2m067u64"]
 
 [ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="1_kcnm7"]
 [ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_m30y5"]
 [ext_resource type="Texture2D" uid="uid://c8gssjpqsjlcj" path="res://Assets/play_text.png" id="1_yf6yh"]
 [ext_resource type="Script" path="res://Scenes/ChickenPlayButton.gd" id="3_gknal"]
-[ext_resource type="Theme" path="res://Scenes/button_theme.tres" id="4_0vqnh"]
+[ext_resource type="Theme" uid="uid://dlv0w2n2xe6v5" path="res://Scenes/button_theme.tres" id="4_0vqnh"]
 [ext_resource type="Script" path="res://Scenes/ChickenQuit.gd" id="5_1rrbw"]
 [ext_resource type="Texture2D" uid="uid://baq6x17kufp3n" path="res://Assets/quit_text.png" id="7_jcjb3"]
 [ext_resource type="PackedScene" uid="uid://c4wpwp6ub07s8" path="res://Scenes/tile_map.tscn" id="8_3gfuy"]
