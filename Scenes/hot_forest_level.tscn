@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_ictn5"]
 [ext_resource type="PackedScene" uid="uid://c4wpwp6ub07s8" path="res://Scenes/tile_map.tscn" id="2_ivo75"]
 [ext_resource type="PackedScene" uid="uid://cwgpj8bvbib7d" path="res://Scenes/player.tscn" id="3_vnf01"]
-[ext_resource type="PackedScene" uid="uid://bhwtvnijpq61y" path="res://Scenes/spike.tscn" id="4_an78l"]
+[ext_resource type="PackedScene" path="res://Scenes/spike.tscn" id="4_an78l"]
 [ext_resource type="Texture2D" uid="uid://brsrb7cmqkgoi" path="res://Assets/no_content.png" id="5_hcgra"]
 [ext_resource type="Texture2D" uid="uid://e2awl7hqh42p" path="res://Assets/wow.png" id="6_pqwqi"]
 [ext_resource type="Texture2D" uid="uid://bjiqsbriftf1e" path="res://Assets/true_explorer.png" id="7_ve7ly"]
