@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7a06o4oi3if7"]
+[gd_scene load_steps=18 format=3 uid="uid://cuo5q2m067u64"]
 
 [ext_resource type="Texture2D" uid="uid://c0ci852r1mtbh" path="res://Assets/chicken_dead.png" id="1_kcnm7"]
 [ext_resource type="Texture2D" uid="uid://cmmpxviyi7j5b" path="res://Assets/chicken_sprite_sheet.png" id="1_m30y5"]
