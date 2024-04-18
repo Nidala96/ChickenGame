@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://m8xfsjtijsib"]
+[gd_scene load_steps=23 format=3 uid="uid://dpy4fvk0yn8p6"]
 
 [ext_resource type="PackedScene" uid="uid://3bdfrei2pn7x" path="res://Scenes/background.tscn" id="1_267e8"]
 [ext_resource type="Texture2D" uid="uid://dls2qaivswvwv" path="res://Assets/environment_forest_sheet.png" id="1_h4f2r"]
@@ -1427,10 +1427,10 @@ size = Vector2(429.003, 20)
 
 [node name="Background" parent="." instance=ExtResource("1_267e8")]
 texture_filter = 1
-offset_left = -4679.0
-offset_top = -1033.0
-offset_right = 17847.0
-offset_bottom = 19496.0
+offset_left = -5771.0
+offset_top = -1210.0
+offset_right = 16755.0
+offset_bottom = 19319.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 300
@@ -1581,7 +1581,7 @@ scale = Vector2(6.355, 0.495)
 
 [node name="Player" parent="." instance=ExtResource("2_uysdt")]
 unique_name_in_owner = true
-position = Vector2(-768.954, -363.216)
+position = Vector2(-730, -470)
 
 [node name="BaseChicken" parent="." instance=ExtResource("4_c6fwi")]
 position = Vector2(383, -24)

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var healthPoints : float = 100
 @export var moveSpeed : float = 30
 @export var damage : float = 25
-
+@export var gravityForce = 240
 
 @onready var hitBox = %HitBox
 
@@ -22,7 +22,7 @@ func _ready():
 	add_child(chickenSound)
 
 func _physics_process(_delta):
-	animation_states()
+	animation_states(_delta)
 	turn()
 	movement()
 	sprite_flip()
@@ -43,7 +43,7 @@ func turn():
 			direction = left
 			
 
-func animation_states():
+func animation_states(delta):
 	if velocity.x != 0 && gotHit == false && isDead == false:
 		%BaseChickenSprite.play("run")
 	if gotHit == true && isDead == false:
@@ -51,6 +51,7 @@ func animation_states():
 		await get_tree().create_timer(0.3).timeout
 		gotHit = false
 	if isDead == true:
+		velocity.y += gravityForce * delta
 		%BaseChickenSprite.play("death")
 
 func sprite_flip():

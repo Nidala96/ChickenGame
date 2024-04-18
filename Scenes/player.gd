@@ -104,6 +104,6 @@ func death():
 
 func gameOver():
 	if isDead:
-		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/ui.tscn")
 		
 	

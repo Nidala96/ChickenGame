@@ -1,10 +1,5 @@
 extends Node
 
-var num_players = 8
-var bus = "master"
-
-var available = []  # The available players.
-var queue = []  # The queue of sounds to play.
 var player = AudioStreamPlayer.new()
 
 func _ready():
